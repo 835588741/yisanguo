@@ -1,0 +1,156 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="StyleProgressBarMini" parent="@android:style/Widget.ProgressBar.Horizontal">
+<item name="android:maxHeight">50dip</item>
+<item name="android:minHeight">10dip</item>
+<item name="android:indeterminateOnly">false</item>
+<item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+<item name="android:progressDrawable">@drawable/shape_progressbar_mini</item>
+</style>
+    
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+		<item name="android:windowBackground">@drawable/game_big</item>  
+		<item name="android:windowNoTitle">true</item>          
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <!-- Application theme. -->
+
+        <!-- 自定义loading dialog -->  
+        <style name="loading_dialog" parent="android:style/Theme.Dialog">  
+            <item name="android:windowFrame">@null</item>  
+            <item name="android:windowNoTitle">true</item>   
+            <item name="android:windowBackground">@drawable/load_dialog_bg</item>  
+            <item name="android:windowIsFloating">true</item>  
+            <item name="android:windowContentOverlay">@null</item>  
+        </style>  
+    <!-- 项目缺省样式 -->
+    <style name="soul_smart_school_theme_default" parent="@android:style/Theme">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textSize">18.0sp</item>
+    </style>
+
+    <!-- 欢迎页样式 -->
+    <style name="Theme.SplashTheme" parent="@android:style/Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- 无标题样式 -->
+    <style name="Theme.CustomNoTitleTheme" parent="@android:style/Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+    	<!--重写系统弹出Dialog -->
+    <style name="myDialogTheme" parent="@android:style/Theme.Holo.DialogWhenLarge">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item> 
+        <item name="android:windowNoTitle">true</item><!--除去title-->
+        <item name="android:windowContentOverlay">@null</item> 
+        <item name="android:windowBackground">@android:color/transparent</item><!-- 设置背景透明，以去除系统默认的黑色背景 -->  
+        <item name="android:backgroundDimEnabled">false</item>
+	</style>   
+     
+    <style name="alertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/alertDialogAnimationStyle</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+     
+
+    <style name="alertDialogAnimationStyle">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="alert_dialog_frame_title">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="alert_dialog_progress_content1_dialog_msg_id">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">16.0sp</item>
+    </style>
+
+    <style name="semi_transparent_white">
+        <item name="android:textColor">@color/semi_transparent_white</item>
+    </style>
+
+    <style name="SimpleProgressDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:textAppearance">@android:style/TextAppearance.DialogWindowTitle</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+
+    <style name="loginpage_check_box">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="top_title_text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16dip</item>
+    </style>
+    <style name="customtitlebar" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:actionDropDownStyle">@style/MyTheme.ActionBar.Dropdown</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.Dropdown" parent="@android:style/TextAppearance.Holo.Widget.DropDownItem">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+           <style name="style_defaule_width2match_height2wrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+        <style name="style_defaule_width2wrap_height2wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+        <style name="style_textview_tag">
+            <item name="android:textColor">@color/blue_one</item>
+            <item name="android:textSize">12sp</item>
+            <item name="android:layout_marginRight">8dp</item>
+	        <item name="android:layout_width">wrap_content</item>
+	        <item name="android:layout_height">wrap_content</item>
+        </style>
+        
+       <style name="style_textview_value">
+            <item name="android:textColor">@color/black</item>
+            <item name="android:textSize">12sp</item>
+	        <item name="android:layout_width">wrap_content</item>
+	        <item name="android:layout_height">wrap_content</item>
+        </style>
+</resources>

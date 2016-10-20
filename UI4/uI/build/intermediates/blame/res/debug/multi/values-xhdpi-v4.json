@@ -1,0 +1,330 @@
+[
+    {
+        "outputFile": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\build\\intermediates\\res\\merged\\debug\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 76,
+                    "endOffset": 127
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 1,
+                        "startOffset": 1239,
+                        "endColumn": 73,
+                        "endOffset": 1311
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 132,
+                    "endColumn": 75,
+                    "endOffset": 203
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 1,
+                        "startOffset": 1314,
+                        "endColumn": 72,
+                        "endOffset": 1385
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 208,
+                    "endColumn": 57,
+                    "endOffset": 261
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 312,
+                        "endColumn": 57,
+                        "endOffset": 365
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 266,
+                    "endColumn": 65,
+                    "endOffset": 327
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 1,
+                        "startOffset": 888,
+                        "endColumn": 62,
+                        "endOffset": 949
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 332,
+                    "endColumn": 68,
+                    "endOffset": 396
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 1,
+                        "startOffset": 629,
+                        "endColumn": 65,
+                        "endOffset": 693
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 401,
+                    "endColumn": 67,
+                    "endOffset": 464
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 1,
+                        "startOffset": 822,
+                        "endColumn": 64,
+                        "endOffset": 885
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 469,
+                    "endColumn": 59,
+                    "endOffset": 524
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 1,
+                        "startOffset": 696,
+                        "endColumn": 56,
+                        "endOffset": 751
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 529,
+                    "endColumn": 74,
+                    "endOffset": 599
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 415,
+                        "endColumn": 74,
+                        "endOffset": 485
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 604,
+                    "endColumn": 75,
+                    "endOffset": 675
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 491,
+                        "endColumn": 75,
+                        "endOffset": 562
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 680,
+                    "endColumn": 62,
+                    "endOffset": 738
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 568,
+                        "endColumn": 62,
+                        "endOffset": 626
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 743,
+                    "endColumn": 69,
+                    "endOffset": 808
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 1,
+                        "startOffset": 1049,
+                        "endColumn": 66,
+                        "endOffset": 1114
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 813,
+                    "endColumn": 63,
+                    "endOffset": 872
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 1,
+                        "startOffset": 1117,
+                        "endColumn": 60,
+                        "endOffset": 1176
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 877,
+                    "endColumn": 58,
+                    "endOffset": 931
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 1,
+                        "startOffset": 1179,
+                        "endColumn": 55,
+                        "endOffset": 1233
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 936,
+                    "endColumn": 66,
+                    "endOffset": 998
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 1,
+                        "startOffset": 754,
+                        "endColumn": 63,
+                        "endOffset": 816
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1003,
+                    "endColumn": 46,
+                    "endOffset": 1045
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 1,
+                        "startOffset": 952,
+                        "endColumn": 43,
+                        "endOffset": 994
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1050,
+                    "endColumn": 50,
+                    "endOffset": 1096
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 1,
+                        "startOffset": 997,
+                        "endColumn": 47,
+                        "endOffset": 1043
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1101,
+                    "endColumn": 42,
+                    "endOffset": 1139
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\uI\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 371,
+                        "endColumn": 42,
+                        "endOffset": 409
+                    }
+                }
+            }
+        ]
+    }
+]

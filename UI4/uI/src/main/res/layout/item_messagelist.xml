@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:orientation="vertical" >
+    
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical" >
+    
+    <com.soul.project.application.view.MTextView
+        android:id="@+id/txtMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_light_title_text_color"
+        android:textSize="14sp"
+        android:layout_marginLeft="3dp"
+        android:text="这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息"
+        android:maxLines="3"
+        />
+    
+        <com.soul.project.application.view.MTextView
+        android:id="@+id/txtMessageReplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:paddingLeft="5dp"
+        android:layout_marginRight="6dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:background="@color/gray_one"
+        android:layout_marginLeft="4dp"
+        android:text="这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息这是我收到的第一条消息"
+        android:maxLines="2"
+        />
+    
+
+    <LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingLeft="3dp"
+    android:orientation="horizontal" >
+    
+    <com.soul.project.application.view.MTextView
+        android:id="@+id/txtSenderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:textSize="13sp"
+        android:text="发信者:名字"
+        android:layout_marginRight="6dp"
+        />
+    
+    <com.soul.project.application.view.MTextView
+        android:id="@+id/txtSendTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2016-6-17 13:40:58"
+        android:textSize="12sp"
+        android:layout_marginRight="6dp"
+        android:textColor="@color/blue_two"
+        />
+    
+    <View 
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_weight="1"
+        />
+    
+    <Button 
+        android:id="@+id/btnReplay"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="点击回复"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/button_selector_normalblue_pressgray"
+        android:textSize="10sp"
+        />
+    
+    </LinearLayout>
+    
+
+    </LinearLayout>
+    
+<View 
+    android:layout_width="match_parent"
+    android:layout_height="0.7dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    android:background="@color/blue_two"
+    />
+</LinearLayout>

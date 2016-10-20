@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:clipToPadding="true"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/layoutChenghao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtChenghao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="[功勋之臣]"
+                android:textColor="@color/red"
+                android:textSize="18sp" />
+
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtChenghaoDescript"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="[这是初期奖励给拥有突出贡献的玩家的光荣称号]"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <com.soul.project.application.view.MTextView
+            android:id="@+id/txtSign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/border_of_layout"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="4dp"
+            android:text="点击可以设置个人签名"
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal" >
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="[新手村]"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="[平民]"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutUpPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtCurrentPositionExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="当前功勋:10"
+                    android:textColor="@color/blue_one"
+                    android:textSize="12sp" />
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtNextPositionExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="下级功勋:240"
+                    android:textColor="@color/blue_two"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="玄同太子"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtGrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="等级:???"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            
+
+            <LinearLayout
+                android:id="@+id/layoutUpGrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtCurrentExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="当前经验:10"
+                    android:textColor="@color/blue_one"
+                    android:textSize="12sp" />
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtNextExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="下级经验:240"
+                    android:textColor="@color/blue_two"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            
+                        <LinearLayout
+                android:id="@+id/layoutJieYi"
+                android:layout_below="@id/layoutName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+				
+                    <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtPeiOu"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_marginRight="6dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="4dp"
+                    android:text="妻子:貂蝉"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp" />
+                    
+                    <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtBrother"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="4dp"
+                    android:singleLine="true"
+                    android:text="兄弟:张飞、关羽"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp" />                    
+                            
+            </LinearLayout>
+            
+                        
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <com.soul.project.application.view.MTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="帮派:"
+                android:textColor="@color/black_light_title_text_color"
+                android:textSize="13sp" />
+
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtGroupName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="【上房揭瓦军】"
+                android:textColor="@color/red"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPersonInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtHP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="血量:???"
+                    android:textColor="@drawable/textview_selector"
+                    android:textSize="13sp" />
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtAttack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="攻击:???"
+                    android:textColor="@drawable/textview_selector"
+                    android:textSize="13sp" />
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtDefence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="防御:???"
+                    android:textColor="@drawable/textview_selector"
+                    android:textSize="13sp" />
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtDodge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="灵巧:???"
+                    android:textColor="@drawable/textview_selector"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.soul.project.application.view.MTextView
+            android:id="@+id/txtHPDescript"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="你看起来已经危在旦夕。一阵风也能要了你的命"
+            android:textColor="@color/pink"
+            android:textSize="14sp" />
+
+        <com.soul.project.application.view.MTextView
+            android:id="@+id/txtDescript"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="欢快活泼的孩子，充满稚气的孩童脸庞，还有真心的笑容常伴，让人看着就喜欢。"
+            android:textColor="@color/gray_two"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layoutWuqi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zb_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <!-- 武器 -->
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtWuQi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/zhuangbei_marigin"
+                    android:text="【手持】 方天画戟"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/zb_textsize"
+                    android:visibility="visible" />
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnWuqiNJ"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="6dp"
+                    android:text="[耐:1200]"
+                    android:textColor="@color/red"
+                    android:textSize="10dp" />
+                
+                
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnDisWuqi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:gravity="left"
+                    android:padding="6dp"
+                    android:text="卸除"
+                    android:textColor="@color/red"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTouKui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zb_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <!-- 头盔 -->
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtTouKuai"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.6"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/zhuangbei_marigin"
+                    android:text="【头戴】 三叉紫金束发冠"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/zb_textsize" />
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnTouKuaiNJ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="0.25"
+                    android:padding="6dp"
+                    android:text="[ 耐:1200]"
+                    android:textColor="@color/red"
+                    android:textSize="10dp" />                
+                
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnDisTouKui"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:gravity="left"
+                    android:padding="6dp"
+                    android:text="卸除"
+                    android:textColor="@color/red"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutPiFeng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zb_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <!-- 披风 -->
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtPiFeng"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.6"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/zhuangbei_marigin"
+                    android:text="【肩披】 镶花龙纹大红袍"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/zb_textsize"
+                    android:visibility="visible" />
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnPiFengNJ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="0.25"
+                    android:padding="6dp"
+                    android:text="[ 耐:1200]"
+                    android:textColor="@color/red"
+                    android:textSize="10dp" /> 
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnDisPiFeng"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:gravity="left"
+                    android:padding="6dp"
+                    android:text="卸除"
+                    android:textColor="@color/red"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutKaiJia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zb_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <!-- 盔甲 -->
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtKuiJia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.6"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/zhuangbei_marigin"
+                    android:text="【身穿】 极光黑金霸王铠"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/zb_textsize" />
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnKuiJiaNJ"
+                    android:layout_weight="0.25"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="6dp"
+                    android:text="[ 耐:1200]"
+                    android:textColor="@color/red"
+                    android:textSize="10dp" /> 
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnDisKaiJia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:gravity="left"
+                    android:padding="6dp"
+                    android:text="卸除"
+                    android:textColor="@color/red"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutYaoDai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zb_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <!-- 腰带 -->
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtYaoDai"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.6"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/zhuangbei_marigin"
+                    android:text="【腰系】 流苏银月狮头带"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/zb_textsize" />
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnYaoDiaNJ"
+                    android:layout_weight="0.25"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="6dp"
+                    android:text="[ 耐:1200]"
+                    android:textColor="@color/red"
+                    android:textSize="10dp" /> 
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnDisYaoDai"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:gravity="left"
+                    android:padding="6dp"
+                    android:text="卸除"
+                    android:textColor="@color/red"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <!-- 鞋子 -->
+
+            <LinearLayout
+                android:id="@+id/layoutXieZi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zb_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtXieZi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.6"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/zhuangbei_marigin"
+                    android:text="【足下】 精织飞云靴"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/zb_textsize" />
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnXieZiNJ"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="6dp"
+                    android:text="[ 耐:1200]"
+                    android:textColor="@color/red"
+                    android:textSize="10dp" /> 
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnDisXieZi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:gravity="left"
+                    android:padding="6dp"
+                    android:text="卸除"
+                    android:textColor="@color/red"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutJieZi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zb_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <!-- 戒指 -->
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtJieZi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.85"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/zhuangbei_marigin"
+                    android:text="【指绕】 红冕王戒"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/zb_textsize"
+                    android:visibility="visible" />
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/btnDisJieZi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:gravity="left"
+                    android:padding="6dp"
+                    android:text="卸除"
+                    android:textColor="@color/red"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtKill"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="杀戮"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="16sp" />
+
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtTalk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="对话"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="16sp" />
+
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtAddFriend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="加好友"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="组队"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="16sp" />
+
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtTransaction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="交易"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="16sp" />
+
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtGoOut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="离开"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtForum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="论坛"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="16sp" />
+
+            <com.soul.project.application.view.MTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="交易"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <com.soul.project.application.view.MTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="离开"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/layoutFunction3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_bar_height"
+            android:background="#9de5f7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnForm"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_selecctor"
+                android:gravity="center"
+                android:text="论坛"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="@dimen/menu_bar_button_textsize" />
+
+            <Button
+                android:id="@+id/btnGroup"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_selecctor"
+                android:gravity="center"
+                android:text="部曲"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="@dimen/menu_bar_button_textsize" />
+
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtPlaceName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="#f6db9c"
+                android:gravity="center"
+                android:text="我的状态"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/menu_bar_title_textsize" />
+
+            <Button
+                android:id="@+id/btnGoBack"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_selecctor"
+                android:gravity="center"
+                android:text="回城"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="@dimen/menu_bar_button_textsize" />
+
+            <Button
+                android:id="@+id/btnHelp"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_selecctor"
+                android:gravity="center"
+                android:text="官网"
+                android:textColor="@drawable/textview_selector"
+                android:textSize="@dimen/menu_bar_button_textsize" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

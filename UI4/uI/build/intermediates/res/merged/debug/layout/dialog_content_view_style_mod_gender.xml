@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    android:padding="8dp"
+    >
+        <Button 
+            android:id="@+id/btnTakePhoto"
+            style="@style/style_defaule_width2match_height2wrap"
+            android:text="拍照"
+            android:background="@drawable/button_selector_mod_gender"
+            android:textColor="@color/white"
+            />
+         <Button 
+            android:id="@+id/btnSelectFormPhoto"
+            style="@style/style_defaule_width2match_height2wrap"
+            android:text="相册"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_selector_mod_gender"
+            android:textColor="@color/white"
+            />
+
+</LinearLayout>
