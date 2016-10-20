@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:orientation="horizontal" >
+    
+        
+        <com.soul.project.application.view.MTextView 
+        android:id="@+id/txtTag"
+        android:layout_width="wrap_content"
+        android:text=""
+        android:textColor="@color/green"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        />
+    
+    <com.soul.project.application.view.MTextView 
+        android:id="@+id/txtNumber"
+        android:layout_width="0dp"
+        android:layout_weight="0.4"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        android:gravity="left"
+        android:layout_height="wrap_content"
+        />
+
+    
+    <com.soul.project.application.view.MTextView 
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_weight="0.6"
+        android:textColor="@color/blue"
+        android:text=""
+        android:gravity="left"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

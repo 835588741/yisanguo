@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.soul.project.story.activity"
+    android:versionCode="20"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="21" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:taskAffinity="android.task.soul.myapp" >
+        <meta-data
+            android:name="BaiduMobAd_APP_ID"
+            android:value="c4edf4f4" />
+        <meta-data
+            android:name="BaiduMobAd_APP_SEC"
+            android:value="c4edf4f4" />
+
+        <activity
+            android:name=".YaShaiZiActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SheLieActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".CasinoSelectModeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DrugsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".FishingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.soul.project.story.activity.HelpActivity" android:screenOrientation="portrait"></activity>
+                <activity
+            android:name="com.soul.project.story.activity.TianDiRenPlay"
+            android:screenOrientation="portrait" >
+        </activity>
+                <activity
+            android:name="com.soul.project.story.activity.TianDiRenList"
+            android:screenOrientation="portrait" >
+            
+        </activity>
+        
+                <activity
+            android:name=".CasinoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".GoodDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".GoodsSellDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".XuanShangActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".AccessMoneyOrThingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".GroupActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".GroupListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".BlackMarketActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".GroupManageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.baidu.mobads.AppActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity
+            android:name="com.soul.project.story.activity.SplashActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FriendListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".BuyGoodsList"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TaskManageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SimpleRegister"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".RankingListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".BattleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PostDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ForumActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MessageListAcrtivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".GoodsListActivty"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PlayerPanelActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MainPanelActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ManageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".GalleryImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MyImageDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".GVDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".GridviewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".LoginAndRegistActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 微信回调activity -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- QQ回调 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104799437" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".MyselfHouserActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_myself_houser" >
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 拨打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 发送短信 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!-- 杀进程 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <!-- 摄像头权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- SD卡权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 数据库权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 快捷方式权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- 判断联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 收藏广告快捷方式到桌面的权限,可提升收益 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+</manifest>

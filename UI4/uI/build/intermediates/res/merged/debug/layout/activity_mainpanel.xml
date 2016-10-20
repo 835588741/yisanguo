@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:baiduadsdk="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+     >
+
+    <RelativeLayout
+        android:id="@+id/mainPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/layoutChatView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_color"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txtChatTestPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="姑娘|"
+                    android:textColor="@color/red"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txtChatTestName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="貂蝉："
+                    android:textColor="@color/blue"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txtChatTest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="2"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="玄异三国欢迎您回来！"
+                    android:textColor="@color/yellow"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnShowOrGoneInputLayout"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_selector_green"
+                    android:text="发言"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutInputMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/txtChatInputTest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="请输入信息"
+                    android:maxLength="20"
+                    android:maxLines="2"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btnSendMess"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_selector_green"
+                    android:text="发送"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <TextView 
+            android:id="@+id/txtTeamMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutChatView"
+            android:textSize="11sp"
+            android:visibility="visible"
+            android:layout_marginLeft="5dp"
+			android:background="@color/app_color"
+            android:textColor="@color/black"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/txtTeamMessage" >
+
+            <LinearLayout
+                android:id="@+id/layoutBig"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_light"
+                android:orientation="vertical" >
+
+                <com.soul.project.application.view.MTextView
+                    android:id="@+id/txtNotice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_light_title_text_color"
+                    android:ellipsize="marquee"
+                    android:lines="2"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <com.baidu.mobads.AdView
+                    android:id="@+id/adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    baiduadsdk:adId=""
+                    baiduadsdk:adSize="0" />
+                <!-- 注： baiduadsdk:adId可以指定为"",表示默认广告位 -->
+
+                <ListView
+                    android:id="@+id/listAchieve"
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    android:layout_height="35dp" >
+                </ListView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <com.soul.project.application.view.MTextView
+                        android:id="@+id/txtBattleDescript"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text=""
+                        android:visibility="gone"
+                        android:textColor="@color/store_blue"
+                        android:textSize="12sp" />
+
+                    <com.soul.project.application.view.MTextView
+                        android:id="@+id/txtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="6dp"
+                        android:paddingBottom="1dp"
+                        android:text="忆三国新年广场"
+                        android:textStyle="bold"
+                        android:textColor="@color/zise"
+                        android:textSize="16sp" />
+
+                    <com.soul.project.application.view.MTextView
+                        android:id="@+id/txtDescript"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.06"
+                        android:text="这里是纪念曾今游戏的小广场。广场上每个人都充满了回忆和憧憬。"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                    <!-- 功能区域 -->
+
+                    <LinearLayout
+                        android:id="@+id/layoutFunction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:visibility="gone" >
+
+                        <com.soul.project.application.view.MTextView
+                            android:id="@+id/txtFunction01"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="功能1"
+                            android:textColor="@drawable/textview_selector_style2"
+                            android:textSize="15sp" />
+
+                        <com.soul.project.application.view.MTextView
+                            android:id="@+id/txtFunction02"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="功能2"
+                            android:textColor="@drawable/textview_selector_style2"
+                            android:textSize="15sp" />
+
+                        <com.soul.project.application.view.MTextView
+                            android:id="@+id/txtFunction03"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="功能3"
+                            android:textColor="@drawable/textview_selector_style2"
+                            android:textSize="15sp" />
+
+                        <com.soul.project.application.view.MTextView
+                            android:id="@+id/txtFunction04"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="功能4"
+                            android:textColor="@drawable/textview_selector_style2"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <!-- 此地有NPC -->
+
+                    <LinearLayout
+                        android:id="@+id/layoutSomeBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <com.soul.project.application.view.MTextView
+                            android:id="@+id/numberNPC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="你遇到了:"
+                            android:textColor="@color/blue_two"
+                            android:textSize="12sp" />
+
+                        <com.soul.project.application.view.MGridView
+                            android:id="@+id/gvNPC"
+                            android:stretchMode="columnWidth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:numColumns="4" />
+                    </LinearLayout>
+
+                    <!-- 地上有物品 -->
+
+                    <LinearLayout
+                        android:id="@+id/layoutSomething"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <com.soul.project.application.view.MTextView
+                            android:id="@+id/numberGoods"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="地上有:"
+                            android:textColor="@color/blue_two"
+                            android:textSize="12sp" />
+
+                        <com.soul.project.application.view.MGridView
+                            android:id="@+id/gvGoods"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:stretchMode="columnWidth"
+                            android:numColumns="4" />
+                    </LinearLayout>
+
+                    <!-- 在此地遇上的人 -->
+
+                    <LinearLayout
+                        android:id="@+id/layoutMetSomeBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <com.soul.project.application.view.MTextView
+                            android:id="@+id/txtNearByNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="你身边有:"
+                            android:textColor="@color/blue_two"
+                            android:textSize="12sp" />
+
+                        <com.soul.project.application.view.MGridView
+                            android:id="@+id/gvPerson"
+                            android:stretchMode="columnWidth"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:numColumns="5" />
+                    </LinearLayout>
+
+                    <!-- 四个方位的选择 -->
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical" >
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal" >
+
+                            <com.soul.project.application.view.MTextView
+                                android:id="@+id/txtNorth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_of_layout"
+                                android:gravity="center"
+                                android:minWidth="80dp"
+                                android:padding="4dp"
+                                android:text="三国犹在"
+                                android:textColor="@drawable/textview_selector"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:gravity="center_horizontal" >
+
+                            <com.soul.project.application.view.MTextView
+                                android:id="@+id/txtWest"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/border_of_layout"
+                                android:gravity="center"
+                                android:minWidth="80dp"
+                                android:padding="4dp"
+                                android:text="你还好吗"
+                                android:textColor="@drawable/textview_selector"
+                                android:textSize="14sp" />
+
+                            <com.soul.project.application.view.MTextView
+                                android:id="@+id/txtCenter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:minWidth="80dp"
+                                android:padding="4dp"
+                                android:text="乱世忆三国"
+                                android:textColor="@color/gray_two"
+                                android:textSize="14sp" />
+
+                            <com.soul.project.application.view.MTextView
+                                android:id="@+id/txtEast"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/border_of_layout"
+                                android:gravity="center"
+                                android:minWidth="80dp"
+                                android:padding="4dp"
+                                android:text="物是人空"
+                                android:textColor="@drawable/textview_selector"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal" >
+
+                            <com.soul.project.application.view.MTextView
+                                android:id="@+id/txtSouth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/border_of_layout"
+                                android:gravity="center"
+                                android:minWidth="80dp"
+                                android:padding="4dp"
+                                android:text="多年未见"
+                                android:textColor="@drawable/textview_selector"
+                                android:textSize="14sp" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <!-- 离开此地的人的踪迹 -->
+
+                    <ListView
+                        android:id="@+id/listLeave"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="50dp" >
+                    </ListView>
+                </LinearLayout>
+
+                <!-- 菜单栏 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_bar_height"
+                    android:background="#9de5f7"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btnThings"
+                        android:layout_width="@dimen/button_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_selecctor"
+                        android:gravity="center"
+                        android:text="行囊"
+                        android:textColor="@drawable/textview_selector"
+                        android:textSize="@dimen/menu_bar_button_textsize" />
+
+                    <Button
+                        android:id="@+id/btnStatus"
+                        android:layout_width="@dimen/button_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_selecctor"
+                        android:gravity="center"
+                        android:text="状态"
+                        android:textColor="@drawable/textview_selector"
+                        android:textSize="@dimen/menu_bar_button_textsize" />
+
+                    <Button
+                        android:id="@+id/btnTask"
+                        android:layout_width="@dimen/button_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_selecctor"
+                        android:gravity="center"
+                        android:text="任务"
+                        android:textColor="@drawable/textview_selector"
+                        android:textSize="@dimen/menu_bar_button_textsize" />
+
+                    <com.soul.project.application.view.MTextView
+                        android:id="@+id/txtRefresh"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_selector_green"
+                        android:gravity="center"
+                        android:text="点击刷新"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/menu_bar_title_textsize" />
+
+                    <Button
+                        android:id="@+id/btnFriend"
+                        android:layout_width="@dimen/button_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_selecctor"
+                        android:gravity="center"
+                        android:text="好友"
+                        android:textColor="@drawable/textview_selector"
+                        android:textSize="@dimen/menu_bar_button_textsize" />
+
+                    <Button
+                        android:id="@+id/btnMessage"
+                        android:layout_width="@dimen/button_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_selecctor"
+                        android:gravity="center"
+                        android:text="私信"
+                        android:textColor="@drawable/textview_selector"
+                        android:textSize="@dimen/menu_bar_button_textsize" />
+
+                    <Button
+                        android:id="@+id/btnSetting"
+                        android:layout_width="@dimen/button_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_selecctor"
+                        android:gravity="center"
+                        android:text="设置"
+                        android:textColor="@drawable/textview_selector"
+                        android:textSize="@dimen/menu_bar_button_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@drawable/cmp_progress_dialog_indeterminate"
+                android:progressDrawable="@drawable/cmp_progress_dialog_indeterminate" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

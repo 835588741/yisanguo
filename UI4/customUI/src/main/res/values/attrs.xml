@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="switchAttrs">
+        <attr name="check" format="boolean"></attr>
+        <attr name="check_image" format="reference"></attr>
+        <attr name="uncheck_image" format="reference"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="switchButtonsAttrs">
+        
+        <!-- 选定状态时按钮背景颜色 -->
+        <attr name="selectBGColor" format="reference" />
+        
+        <!-- 未选定状态的按钮背景颜色 -->
+        <attr name="unselectBGColor" format="reference" />
+        
+        <!-- 选定状态下的文本颜色 -->
+        <attr name="selectTextColor" format="color"/>
+        
+        <!-- 未选定状态下的文本颜色 -->
+        <attr name="unselectTextColor" format="color"/>
+        
+        <!-- 最左边按钮文本文字 -->
+        <attr name="leftString" format="string"/>
+        
+        <!-- 最右边按钮的文本文字 -->
+        <attr name="rightString" format="string"/>
+        
+        <!-- 中间的按钮文本文字 -->
+        <attr name="centerString" format="string"></attr>
+        
+        <!-- 边框的颜色 -->
+        <attr name="borderColor" format="color"></attr>
+        
+        <!-- 边框的粗细尺寸 -->
+        <attr name="borderSize" format="integer"></attr>
+        
+        <!-- 按钮数量   默认|2  最多|3  超过3则按3计算 -->
+        <attr name="numOfButton" format="integer"></attr>
+        
+    </declare-styleable>
+    
+    
+            <declare-styleable name="XSYCircleImageView">
+        <attr name="border_width_ci" format="dimension" />
+        <attr name="border_color_ci" format="color" />
+    </declare-styleable>
+    
+    
+    
+   <declare-styleable name="apptitlebar">
+        <attr name="leftViewIcon" format="reference" />
+        <attr name="rightViewIcon" format="reference" />
+        <attr name="centerViewIcon" format="reference" />
+        
+        <attr name="leftButtonClickable" format="boolean"></attr>
+        
+        <attr name="leftViewStringColor" format="color"/>
+        <attr name="rightViewStringColor" format="color"/>
+        
+        <attr name="leftViewString" format="string"/>
+        <attr name="rightViewString" format="string"/>
+        
+        <attr name="titlebarString" format="string"></attr>
+        <attr name="titlebarStringColor" format="color"></attr>
+        
+        <attr name="hidden_left_icon" format="boolean"></attr>
+        <attr name="hidden_right_icon" format="boolean"></attr>
+        
+        <attr name="leftViewTextBottomLine" format="boolean"></attr>
+        <attr name="rightViewTextBottomLine" format="boolean"></attr>
+        
+  </declare-styleable>
+    
+   <!-- 圆角ImageView -->
+       <declare-styleable name="XSYRoundedImageView">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="mutate_background" format="boolean" />
+        <attr name="oval" format="boolean" />
+        <attr name="android:scaleType" />
+    </declare-styleable>
+    
+    <declare-styleable name="XSYRoundProgressBar">  
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="progressTextColor" format="color" />  
+        <attr name="progressTextSize" format="dimension" /> 
+        <attr name="max" format="integer"></attr> 
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable> 
+</resources>

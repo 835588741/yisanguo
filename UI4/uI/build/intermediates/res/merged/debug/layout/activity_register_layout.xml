@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.signalripple.fitnessbike.view.CustomTitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_titlebar_height" >
+    </com.signalripple.fitnessbike.view.CustomTitleBar>
+
+    <LinearLayout
+        style="@style/style_defaule_width2match_height2wrap"
+        android:layout_marginTop="@dimen/activity_vertical_margin_middle"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/activity_margin_padding_lr"
+        android:layout_marginRight="@dimen/activity_margin_padding_lr"
+        >
+
+        <TextView
+            android:id="@+id/activity_register_tv_phone_pre"
+            style="@style/style_defaule_width2wrap_height2wrap"
+            android:text="@string/string_phone_pre" />
+
+        <EditText
+            android:id="@+id/activity_register_et_phone_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin_small"
+            android:hint="@string/string_input_phonenumber"
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/activity_register_btn_verification"
+            style="@style/style_defaule_width2wrap_height2wrap"
+            android:text="@string/string_get_phone_verification" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/activity_register_et_verificationnumber"
+        style="@style/style_defaule_width2match_height2wrap"
+        android:layout_marginTop="@dimen/activity_vertical_margin_middle"
+        android:layout_marginBottom="@dimen/activity_main_button_margin_top"
+        android:layout_marginLeft="@dimen/activity_margin_padding_lr"
+        android:layout_marginRight="@dimen/activity_margin_padding_lr"
+        android:background="@null"
+        android:visibility="gone"
+        android:hint="@string/string_input_verificationnumber" />
+
+    <EditText
+        android:id="@+id/activity_register_et_pwd"
+        style="@style/style_defaule_width2match_height2wrap"
+        android:layout_marginBottom="@dimen/activity_main_button_margin_top"
+        android:layout_marginLeft="@dimen/activity_margin_padding_lr"
+        android:layout_marginRight="@dimen/activity_margin_padding_lr"
+        android:layout_marginTop="@dimen/activity_vertical_margin_middle"
+        android:background="@null"
+        android:hint="@string/string_input_pwd" />
+
+    <!-- android:background="@drawable/bg_edittext" -->
+    <EditText
+        android:id="@+id/activity_register_et_pwd_confirm"
+        style="@style/style_defaule_width2match_height2wrap"
+        android:layout_marginBottom="@dimen/activity_main_button_margin_top"
+        android:layout_marginLeft="@dimen/activity_margin_padding_lr"
+        android:layout_marginRight="@dimen/activity_margin_padding_lr"
+        android:background="@null"
+        android:hint="@string/string_input_pwd_confirm" />
+
+    <Button
+        android:id="@+id/activity_register_btn_register"
+        style="@style/style_defaule_width2match_height2wrap"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin_large"
+        android:layout_marginRight="@dimen/activity_horizontal_margin_large"
+        android:layout_marginTop="@dimen/activity_register_button_margin_top"
+        android:background="@drawable/button_general_selector"
+        android:text="@string/string_register" />
+
+</LinearLayout>

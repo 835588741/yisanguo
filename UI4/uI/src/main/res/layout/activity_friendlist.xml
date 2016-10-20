@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white"
+        android:clipToPadding="true"
+    android:fitsSystemWindows="true" 
+    >
+    
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/friendlist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:layout_margin="4dp"
+        />
+
+                	<!-- 菜单栏 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_bar_height"
+        android:background="#9de5f7"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+    
+      <Button
+            android:id="@+id/btnThings"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="暗器"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/edittext_selecctor"
+            android:textColor="@drawable/textview_selector"
+            android:textSize="@dimen/menu_bar_button_textsize" />
+      
+      <Button
+            android:id="@+id/btnStatus"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="技能"
+            android:visibility="gone"
+            android:gravity="center"
+            android:background="@drawable/edittext_selecctor"
+            android:textColor="@drawable/textview_selector"
+            android:textSize="@dimen/menu_bar_button_textsize" />
+      
+            <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="@dimen/button_width_big"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:gravity="center"
+            android:background="@drawable/edittext_selecctor"
+            android:textColor="@drawable/textview_selector"
+            android:textSize="@dimen/menu_bar_button_textsize" />
+      
+            <com.soul.project.application.view.MTextView
+            android:id="@+id/txtNumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:layout_height="match_parent"
+            android:text="10/23"
+            android:gravity="center"
+            android:background="@drawable/button_selector_green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/menu_bar_title_textsize" />
+            
+
+     
+      <Button
+            android:id="@+id/btnRight"
+            android:layout_width="@dimen/button_width_big"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:gravity="center"
+            android:background="@drawable/edittext_selecctor"
+            android:textColor="@drawable/textview_selector"
+            android:textSize="@dimen/menu_bar_button_textsize" />      
+            
+    </LinearLayout>
+            
+</LinearLayout>

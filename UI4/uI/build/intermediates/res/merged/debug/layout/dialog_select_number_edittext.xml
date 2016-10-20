@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white_one"
+    android:orientation="vertical" >
+    
+    <EditText 
+        android:id="@+id/etSelectNumber"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:minHeight="40dp"
+        android:hint="你要丢弃多少"
+        android:textSize="14sp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:textColorHint="@color/gray_two"
+        android:textColor="@color/red"
+        android:background="@drawable/border_of_layout"
+        />
+
+</LinearLayout>

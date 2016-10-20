@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/gray_light"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    
+           <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/app_color"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbGrade"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_switch_select"
+                android:button="@null"
+                android:textSize="13sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="高手榜"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rbRight"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:textSize="13sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="功勋榜"
+                android:textColor="@color/black" />
+            
+                        <RadioButton
+                android:id="@+id/rbMoney"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:textSize="13sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="财富榜"
+                android:textColor="@color/black" />
+            
+              <RadioButton
+                android:id="@+id/rbCountry"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:textSize="13sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="国力榜"
+                android:textColor="@color/black" />                        
+        </RadioGroup>
+        
+       <ListView 
+           android:id="@+id/listview"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           />
+
+       <LinearLayout 
+           android:id="@+id/layoutCounty"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:visibility="visible"
+           >
+	       <LinearLayout 
+	           android:layout_width="match_parent"
+	           android:layout_height="wrap_content"
+	           android:orientation="horizontal"
+	           android:paddingLeft="8dp"
+	           android:layout_marginTop="12dp"
+	           android:paddingBottom="8dp"
+	           android:gravity="center_vertical"
+	           >
+	           
+	            <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtTag1"
+		        android:layout_width="wrap_content"
+		        android:textColor="@color/green"
+		        android:gravity="center"
+		        android:layout_height="wrap_content"
+		        />
+	            
+			    <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtCountry1"
+		        android:layout_width="0dp"
+		        android:layout_weight="0.25"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/blue"
+		        android:textSize="18sp"
+		        android:textStyle="bold"
+		        />
+	           
+			    <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtCountry1money"
+		        android:layout_width="0dp"
+		        android:layout_weight="0.4"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/blue"
+		        android:textSize="16sp"
+		        />	
+		        		    
+			    <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtCountry1person"
+		        android:layout_width="0dp"
+		        android:layout_weight="0.35"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/blue"
+		        android:textSize="15sp"
+		        android:textStyle="italic"
+		        />			    
+	       </LinearLayout>
+           
+	       <View 
+	           android:layout_width="match_parent"
+	           android:layout_height="0.5dp"
+	           android:layout_marginLeft="10dp"
+	           android:layout_marginRight="10dp"
+	           android:layout_marginTop="5dp"
+	           android:layout_marginBottom="5dp"
+	           android:background="@color/gray_one"
+	           />
+	       
+	       <LinearLayout 
+	           android:layout_width="match_parent"
+	           android:layout_height="wrap_content"
+	           android:orientation="horizontal"
+	           android:paddingLeft="8dp"
+	           android:paddingBottom="8dp"
+	           android:gravity="center_vertical"
+	           >
+	           
+	            <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtTag2"
+		        android:layout_width="wrap_content"
+		        android:text=""
+		        android:textColor="@color/green"
+		        android:gravity="center"
+		        android:layout_height="wrap_content"
+		        />
+	            
+			    <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtCountry2"
+		        android:layout_width="0dp"
+		        android:layout_weight="0.25"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/blue"
+		        android:textSize="18sp"
+		        android:textStyle="bold"
+		        />
+	           
+			    <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtCountry2money"
+		        android:layout_width="0dp"
+		        android:layout_weight="0.4"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/blue"
+		        android:textSize="16sp"
+		        />	
+		        		    
+			    <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtCountry2person"
+		        android:layout_width="0dp"
+		        android:layout_weight="0.35"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/blue"
+		        android:textSize="15sp"
+		        android:textStyle="italic"
+		        />			    
+	       </LinearLayout>
+	       
+	       	       <View 
+	           android:layout_width="match_parent"
+	           android:layout_height="0.5dp"
+	           android:layout_marginLeft="10dp"
+	           android:layout_marginRight="10dp"
+	           android:layout_marginTop="5dp"
+	           android:layout_marginBottom="5dp"
+	           android:background="@color/gray_one"
+	           />
+	       
+	       <LinearLayout 
+	           android:layout_width="match_parent"
+	           android:layout_height="wrap_content"
+	           android:orientation="horizontal"
+	           android:paddingLeft="8dp"
+	           android:paddingBottom="8dp"
+	           android:gravity="center_vertical"
+	           >
+	           
+	            <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtTag4"
+		        android:layout_width="wrap_content"
+		        android:text=""
+		        android:textColor="@color/green"
+		        android:gravity="center"
+		        android:layout_height="wrap_content"
+		        />
+	            
+			    <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtCountry4"
+		        android:layout_width="0dp"
+		        android:layout_weight="0.25"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/blue"
+		        android:textSize="18sp"
+		        android:textStyle="bold"
+		        />
+	           
+			    <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtCountry4money"
+		        android:layout_width="0dp"
+		        android:layout_weight="0.4"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/blue"
+		        android:textSize="16sp"
+		        />	
+		        		    
+			    <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtCountry4person"
+		        android:layout_width="0dp"
+		        android:layout_weight="0.35"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/blue"
+		        android:textSize="15sp"
+		        android:textStyle="italic"
+		        />			    
+	       </LinearLayout>
+	       
+	       	       <View 
+	           android:layout_width="match_parent"
+	           android:layout_height="0.5dp"
+	           android:layout_marginLeft="10dp"
+	           android:layout_marginRight="10dp"
+	           android:layout_marginTop="5dp"
+	           android:layout_marginBottom="5dp"
+	           android:background="@color/gray_one"
+	           />
+	       
+	       
+	       	       <LinearLayout 
+	           android:layout_width="match_parent"
+	           android:layout_height="wrap_content"
+	           android:orientation="horizontal"
+	           android:paddingLeft="8dp"
+	           android:paddingBottom="8dp"
+	           android:gravity="center_vertical"
+	           >
+	           
+	            <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtTag3"
+		        android:layout_width="wrap_content"
+		        android:text=""
+		        android:textColor="@color/green"
+		        android:gravity="center"
+		        android:layout_height="wrap_content"
+		        />
+	            
+			    <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtCountry3"
+		        android:layout_width="0dp"
+		        android:layout_weight="0.25"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/blue"
+		        android:textSize="18sp"
+		        android:textStyle="bold"
+		        />
+	           
+			    <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtCountry3money"
+		        android:layout_width="0dp"
+		        android:layout_weight="0.4"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/blue"
+		        android:textSize="16sp"
+		        />	
+		        		    
+			    <com.soul.project.application.view.MTextView 
+		        android:id="@+id/txtCountry3person"
+		        android:layout_width="0dp"
+		        android:layout_weight="0.35"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/blue"
+		        android:textSize="15sp"
+		        android:textStyle="italic"
+		        />			    
+	       </LinearLayout>	       
+       </LinearLayout>
+</LinearLayout>

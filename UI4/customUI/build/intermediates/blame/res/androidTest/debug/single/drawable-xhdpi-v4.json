@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\image_toast_error.png",
+        "source": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\image_toast_error.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\image_close_status.png",
+        "source": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\image_close_status.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\image_open_status.png",
+        "source": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\image_open_status.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_valid.png",
+        "source": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_valid.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\cmp_progress_dialog_toast_frame.9.png",
+        "source": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\cmp_progress_dialog_toast_frame.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\image_toast_success.png",
+        "source": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\image_toast_success.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_return.png",
+        "source": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_return.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\findbox.png",
+        "source": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\findbox.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_password.png",
+        "source": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_password.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\image_bg_titlebar.9.png",
+        "source": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\image_bg_titlebar.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_account.png",
+        "source": "C:\\Users\\Administrator.WIN-A68PM6MC3DG\\Desktop\\ECTAS\\UI4\\customUI\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_account.png"
+    }
+]

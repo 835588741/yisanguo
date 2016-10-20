@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date">
+    <item>年</item>
+      <item>月</item>
+      <item>日</item>
+ </string-array>
+    <array name="messages">
+	    <item>貂蝉：你可以加入我们的游戏Q群:362595000</item>
+	    <item>貂蝉：不知道怎么玩了是吧，别着急，先去问问貂蝉的丫鬟吧，让她指引你。</item>
+	    <item>貂蝉：如果身上有银两铜板可以先去商店买些装备，把自己武装起来打怪会更容易。</item>
+	    <item>貂蝉：如果遇到什么问题或者有建议，可以加入我们的游戏Q群:362595000。</item>
+	    <item>貂蝉：想知道怎么和别人交流吗？试着点击你想对话的那个人的名字，在他的详细页面里，点击\'对话\'。</item>
+	    <item>貂蝉：如果你打到什么珍贵的物品也可以试着点击名字，然后输入价格交易。</item>
+	    <item>貂蝉：如果有话题想和大家讨论，可以点击自己的\'状态\'，点击\'论坛\'，然后发帖，这样大家就可以看见你的帖子，并参与讨论了。</item>
+	    <item>貂蝉：武器分为三大类：刀、枪、剑，选择自己喜欢的类型吧。</item>
+	    <item>貂蝉：有的装备是带有牌子的,比如：猛虎(加攻击)、巨熊(加大量防御)、蛮牛(加血量)、雄鹰(加小量防御)，带牌子的一般都可以卖出更高的价钱。</item>
+	    <item>貂蝉：每隔三天会爆发一次国战，各个城市的城门将会开启，箭塔，旗楼将会出现，只要攻破任意城门，然后再攻下旗楼，就可以为本国赢得胜利，砍下旗楼者还将获得10两白银奖励。</item>
+	    <item>貂蝉：国战战败国，每天可以领取的工资将会减少，战胜国则会大幅加倍发放工资。</item>
+	    <item>貂蝉：杀人后被通缉的级别分为五等:一二三级通缉犯，特级死刑犯，御批死刑犯</item>
+	    <item>貂蝉：当被守卫主动击杀后将会减少一点红名。</item>
+	    <item>貂蝉：野怪掉落的铜板和装备是根据野怪的等级而定的。</item>
+	    <item>貂蝉:祝君好运!</item>
+	</array>
+    <string-array name="songs">
+        <item>song000.mp3</item>
+        <item>song001.mp3</item>
+        <item>song002.mp3</item>
+        <item>song003.mp3</item>
+        <item>song004.mp3</item>
+        <item>song005.mp3</item>
+        <item>song006.mp3</item>
+        <item>song007.mp3</item>
+        <item>song008.mp3</item>
+        <item>song009.mp3</item>
+        <!--
+        <item>song011.mp3</item>
+        <item>song012.mp3</item>
+        <item>song013.mp3</item>
+        <item>song014.mp3</item>
+        <item>song014.mp3</item>
+        <item>song015.mp3</item>
+        <item>song016.mp3</item>
+        <item>song017.mp3</item>
+        <item>song018.mp3</item>
+        <item>song019.mp3</item>
+        <item>song020.mp3</item>
+        -->
+    </string-array>
+    <attr format="reference" name="switchStyle"/>
+    <color name="TextColor">#FFFFFF</color>
+    <color name="aliceblue">#F0F8FF</color>
+    <color name="antiquewhite">#FAEBD7</color>
+    <color name="app_color">#3ec3b2</color>
+    <color name="app_color_divider">#d9d9d9</color>
+    <color name="app_color_gray">#999999</color>
+    <color name="app_color_text_new">#46bf18</color>
+    <color name="app_gray_four">#e5e5e5</color>
+    <color name="app_gray_one">#f8f7f7</color>
+    <color name="app_gray_three">#efedee</color>
+    <color name="app_gray_two">#efefef</color>
+    <color name="app_night_mode">#7c7778</color>
+    <color name="aqua">#00FFFF</color>
+    <color name="aquamarine">#7FFFD4</color>
+    <color name="azure">#F0FFFF</color>
+    <color name="beige">#F5F5DC</color>
+    <color name="bgColor">#000000</color>
+    <color name="bg_for_cell">#161515</color>
+    <color name="bisque">#FFE4C4</color>
+    <color name="black">#000000</color>
+    <color name="black_light_title_text_color">#333333</color>
+    <color name="blanchedalmond">#FFEBCD</color>
+    <color name="blue">#0000FF</color>
+    <color name="blue_one">#5CACEE</color>
+    <color name="blue_two">#00B2EE</color>
+    <color name="blueviolet">#8A2BE2</color>
+    <color name="brown">#A52A2A</color>
+    <color name="burlywood">#DEB887</color>
+    <color name="cadetblue">#5F9EA0</color>
+    <color name="chartreuse">#7FFF00</color>
+    <color name="chense">#99FFFF</color>
+    <color name="chocolate">#D2691E</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="coral">#FF7F50</color>
+    <color name="cornflowerblue">#6495ED</color>
+    <color name="cornsilk">#FFF8DC</color>
+    <color name="crimson">#DC143C</color>
+    <color name="custom_gray">#3c3e3e</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="darkblue">#00008B</color>
+    <color name="darkcyan">#008B8B</color>
+    <color name="darkgoldenrod">#B8860B</color>
+    <color name="darkgray">#A9A9A9</color>
+    <color name="darkgreen">#006400</color>
+    <color name="darkgrey">#A9A9A9</color>
+    <color name="darkkhaki">#BDB76B</color>
+    <color name="darkmagenta">#8B008B</color>
+    <color name="darkolivegreen">#556B2F</color>
+    <color name="darkorange">#FF8C00</color>
+    <color name="darkorchid">#9932CC</color>
+    <color name="darkred">#8B0000</color>
+    <color name="darksalmon">#E9967A</color>
+    <color name="darkseagreen">#8FBC8F</color>
+    <color name="darkslateblue">#483D8B</color>
+    <color name="darkslategray">#2F4F4F</color>
+    <color name="darkslategrey">#2F4F4F</color>
+    <color name="darkturquoise">#00CED1</color>
+    <color name="darkviolet">#9400D3</color>
+    <color name="deeppink">#FF1493</color>
+    <color name="deepskyblue">#00BFFF</color>
+    <color name="dimgray">#696969</color>
+    <color name="dimgrey">#696969</color>
+    <color name="dodgerblue">#1E90FF</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="firebrick">#B22222</color>
+    <color name="floralwhite">#FFFAF0</color>
+    <color name="forestgreen">#228B22</color>
+    <color name="fuchsia">#FF00FF</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="ghostwhite">#F8F8FF</color>
+    <color name="gold">#FFD700</color>
+    <color name="goldenrod">#DAA520</color>
+    <color name="gray">#808080</color>
+    <color name="gray_light">#eae8ee</color>
+    <color name="gray_lighter">#f5f4f9</color>
+    <color name="gray_one">#cf7f7f7f</color>
+    <color name="gray_two">#515151</color>
+    <color name="green">#008000</color>
+    <color name="greenyellow">#ADFF2F</color>
+    <color name="grey">#808080</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="honeydew">#F0FFF0</color>
+    <color name="hotpink">#FF69B4</color>
+    <color name="indianred">#CD5C5C</color>
+    <color name="indigo">#4B0082</color>
+    <color name="ios_for_style_dialog_button_press_color">#dcdcdc</color>
+    <color name="ios_style_dialog_button_press_color">#dcdcdc</color>
+    <color name="ivory">#FFFFF0</color>
+    <color name="khaki">#F0E68C</color>
+    <color name="lavender">#E6E6FA</color>
+    <color name="lavenderblush">#FFF0F5</color>
+    <color name="lawngreen">#7CFC00</color>
+    <color name="lemonchiffon">#FFFACD</color>
+    <color name="lightblue">#ADD8E6</color>
+    <color name="lightcoral">#F08080</color>
+    <color name="lightcyan">#E0FFFF</color>
+    <color name="lightgoldenrodyellow">#FAFAD2</color>
+    <color name="lightgray">#D3D3D3</color>
+    <color name="lightgreen">#90EE90</color>
+    <color name="lightgrey">#D3D3D3</color>
+    <color name="lightpink">#FFB6C1</color>
+    <color name="lightsalmon">#FFA07A</color>
+    <color name="lightseagreen">#20B2AA</color>
+    <color name="lightskyblue">#87CEFA</color>
+    <color name="lightslategray">#778899</color>
+    <color name="lightslategrey">#778899</color>
+    <color name="lightsteelblue">#B0C4DE</color>
+    <color name="lightyellow">#FFFFE0</color>
+    <color name="lime">#00FF00</color>
+    <color name="limegreen">#32CD32</color>
+    <color name="linen">#FAF0E6</color>
+    <color name="magenta">#FF00FF</color>
+    <color name="maroon">#800000</color>
+    <color name="mediumaquamarine">#66CDAA</color>
+    <color name="mediumblue">#0000CD</color>
+    <color name="mediumorchid">#BA55D3</color>
+    <color name="mediumpurple">#9370DB</color>
+    <color name="mediumseagreen">#3CB371</color>
+    <color name="mediumslateblue">#7B68EE</color>
+    <color name="mediumspringgreen">#00FA9A</color>
+    <color name="mediumturquoise">#48D1CC</color>
+    <color name="mediumvioletred">#C71585</color>
+    <color name="midnightblue">#191970</color>
+    <color name="mintcream">#F5FFFA</color>
+    <color name="mistyrose">#FFE4E1</color>
+    <color name="moccasin">#FFE4B5</color>
+    <color name="navajowhite">#FFDEAD</color>
+    <color name="navy">#000080</color>
+    <color name="oldlace">#FDF5E6</color>
+    <color name="olive">#808000</color>
+    <color name="olivedrab">#6B8E23</color>
+    <color name="orange">#FFA500</color>
+    <color name="orangered">#FF4500</color>
+    <color name="orchid">#DA70D6</color>
+    <color name="palegoldenrod">#EEE8AA</color>
+    <color name="palegreen">#98FB98</color>
+    <color name="paleturquoise">#AFEEEE</color>
+    <color name="palevioletred">#DB7093</color>
+    <color name="papayawhip">#FFEFD5</color>
+    <color name="peachpuff">#FFDAB9</color>
+    <color name="peru">#CD853F</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="plum">#DDA0DD</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="powderblue">#B0E0E6</color>
+    <color name="purple">#800080</color>
+    <color name="red">#ffff0000</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="rosybrown">#BC8F8F</color>
+    <color name="royalblue">#4169E1</color>
+    <color name="saddlebrown">#8B4513</color>
+    <color name="salmon">#FA8072</color>
+    <color name="sandybrown">#F4A460</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="sea_blue">#32cd99</color>
+    <color name="seagreen">#2E8B57</color>
+    <color name="seashell">#FFF5EE</color>
+    <color name="semi_transparent_white">#7fffffff</color>
+    <color name="setting_bg_more_btn_focus_color">#ffa5a5a5</color>
+    <color name="shadow_color">#ff000000</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="sienna">#A0522D</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="skyblue">#87CEEB</color>
+    <color name="slateblue">#6A5ACD</color>
+    <color name="slategray">#708090</color>
+    <color name="slategrey">#708090</color>
+    <color name="snow">#FFFAFA</color>
+    <color name="springgreen">#00FF7F</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="steelblue">#4682B4</color>
+    <color name="store_blue">#007FFF</color>
+    <color name="tabbar_color">#3bbec0</color>
+    <color name="tan">#D2B48C</color>
+    <color name="teal">#008080</color>
+    <color name="thistle">#D8BFD8</color>
+    <color name="tomato">#FF6347</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_background">#05000000</color>
+    <color name="turquoise">#40E0D0</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="violet">#EE82EE</color>
+    <color name="wheat">#F5DEB3</color>
+    <color name="white">#ffffffff</color>
+    <color name="white_one">#ffd2d2d2</color>
+    <color name="whitesmoke">#F5F5F5</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="zise">#cf05fa</color>
+    <declare-styleable name="Switch"><attr format="reference" name="trackOn"/><attr format="reference" name="trackOff"/><attr format="dimension" name="switchMinHeight"/><attr format="reference" name="thumb"/><attr format="reference" name="track"/><attr format="string" name="textOn"/><attr format="string" name="textOff"/><attr format="dimension" name="thumbTextPadding"/><attr format="reference" name="switchTextAppearance"/><attr format="dimension" name="switchMinWidth"/><attr format="dimension" name="switchPadding"/></declare-styleable>
+    <declare-styleable name="TextAppearance"><attr format="reference|color" name="textColor"/><attr format="dimension" name="textSize"/><attr name="textStyle"><flag name="normal" value="0"/><flag name="bold" value="1"/><flag name="italic" value="2"/></attr><attr name="typeface"><enum name="normal" value="0"/><enum name="sans" value="1"/><enum name="serif" value="2"/><enum name="monospace" value="3"/></attr><attr format="reference|color" name="textColorHighlight"/><attr format="reference|color" name="textColorHint"/><attr format="reference|color" name="textColorLink"/><attr format="boolean" name="textAllCaps"/></declare-styleable>
+    <declare-styleable name="XSYCircleImageView"><attr format="dimension" name="border_width_ci"/><attr format="color" name="border_color_ci"/></declare-styleable>
+    <declare-styleable name="XSYRoundProgressBar"><attr format="color" name="roundColor"/><attr format="color" name="roundProgressColor"/><attr format="dimension" name="roundWidth"/><attr format="color" name="progressTextColor"/><attr format="dimension" name="progressTextSize"/><attr format="integer" name="max"/><attr format="boolean" name="textIsDisplayable"/><attr name="style"><enum name="STROKE" value="0"/><enum name="FILL" value="1"/></attr></declare-styleable>
+    <declare-styleable name="XSYRoundedImageView"><attr format="dimension" name="corner_radius"/><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/><attr format="boolean" name="mutate_background"/><attr format="boolean" name="oval"/><attr name="android:scaleType"/></declare-styleable>
+    <declare-styleable name="apptitlebar"><attr format="reference" name="leftViewIcon"/><attr format="reference" name="rightViewIcon"/><attr format="reference" name="centerViewIcon"/><attr format="boolean" name="leftButtonClickable"/><attr format="color" name="leftViewStringColor"/><attr format="color" name="rightViewStringColor"/><attr format="string" name="leftViewString"/><attr format="string" name="rightViewString"/><attr format="string" name="titlebarString"/><attr format="color" name="titlebarStringColor"/><attr format="boolean" name="hidden_left_icon"/><attr format="boolean" name="hidden_right_icon"/><attr format="boolean" name="leftViewTextBottomLine"/><attr format="boolean" name="rightViewTextBottomLine"/></declare-styleable>
+    <declare-styleable name="com.baidu.mobads.AdView"><attr format="integer" name="adSize"/><attr format="string" name="adId"/></declare-styleable>
+    <declare-styleable name="switchAttrs"><attr format="boolean" name="check"/><attr format="reference" name="check_image"/><attr format="reference" name="uncheck_image"/></declare-styleable>
+    <declare-styleable name="switchButtonsAttrs"><attr format="reference" name="selectBGColor"/><attr format="reference" name="unselectBGColor"/><attr format="color" name="selectTextColor"/><attr format="color" name="unselectTextColor"/><attr format="string" name="leftString"/><attr format="string" name="rightString"/><attr format="string" name="centerString"/><attr format="color" name="borderColor"/><attr format="integer" name="borderSize"/><attr format="integer" name="numOfButton"/></declare-styleable>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin_large">42dp</dimen>
+    <dimen name="activity_horizontal_margin_small">6dp</dimen>
+    <dimen name="activity_main_button_margin_top">10dp</dimen>
+    <dimen name="activity_margin_padding_lr">10dp</dimen>
+    <dimen name="activity_register_button_margin_top">45dp</dimen>
+    <dimen name="activity_textview_size">18sp</dimen>
+    <dimen name="activity_titlebar_height">50dp</dimen>
+    <dimen name="activity_titlebar_searchbar_height">34dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin_middle">40dp</dimen>
+    <dimen name="app_titlebar_default_height">40dp</dimen>
+    <dimen name="appbar_margin">4dp</dimen>
+    <dimen name="button_width">42dp</dimen>
+    <dimen name="button_width_big">82dp</dimen>
+    <dimen name="button_width_large">52dp</dimen>
+    <dimen name="button_width_style2">58dp</dimen>
+    <dimen name="item_margin_top">8dp</dimen>
+    <dimen name="login_and_register_center_margin_top">85dp</dimen>
+    <dimen name="login_and_register_minheight">50dp</dimen>
+    <dimen name="login_and_register_top_imagetip_inner_size">105dp</dimen>
+    <dimen name="login_and_register_top_imagetip_outter_size">106dp</dimen>
+    <dimen name="login_and_register_top_textsize">16sp</dimen>
+    <dimen name="menu_bar_button_textsize">10dp</dimen>
+    <dimen name="menu_bar_button_textsize_big">14dp</dimen>
+    <dimen name="menu_bar_height">34dp</dimen>
+    <dimen name="menu_bar_height_large">88dp</dimen>
+    <dimen name="menu_bar_title_textsize">12dp</dimen>
+    <dimen name="zb_margin">5dp</dimen>
+    <dimen name="zb_textsize">14sp</dimen>
+    <dimen name="zhuangbei_marigin">30dp</dimen>
+    <item name="newslist_item_background" type="drawable">#FFE7E7E7</item>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Beautiful</string>
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="error">Error</string>
+    <string name="exit_confirm">Exit</string>
+    <string name="exit_content">Are determined to quit ?</string>
+    <string name="function_error">Function errot...</string>
+    <string name="function_null">Function null...</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="is_loading">Loading...</string>
+    <string name="password">Password</string>
+    <string name="phone_or_email">Phone or email</string>
+    <string name="string_get_phone_verification">Get verification code</string>
+    <string name="string_input_phonenumber">Please enter your phone number.</string>
+    <string name="string_input_pwd">Set password</string>
+    <string name="string_input_pwd_confirm">Please enter your password again.</string>
+    <string name="string_input_verificationnumber">Verification code</string>
+    <string name="string_login">Login</string>
+    <string name="string_phone_pre">China (+86)</string>
+    <string name="string_register">Register</string>
+    <string name="string_return">Return</string>
+    <string name="string_thirder_login">Third party landing</string>
+    <string name="tip_answer">** 请输入答案 **</string>
+    <string name="tip_submit"> 提交答案 </string>
+    <string name="tip_valid">** 外挂巡逻智力检测 **</string>
+    <string name="tip_valid_desc">请于35秒内完成下面的测试题,填写好答案并提交,否则可能被认为存在外挂行为,35秒后自动关闭。</string>
+    <string name="title_activity_edit_image">EditImageActivity</string>
+    <string name="title_activity_myself_houser">MyselfHouserActivity</string>
+    <string name="update">Update</string>
+    <string name="upgrade_fail">您的经验还不足升级!请继续努力！</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+		<item name="android:windowBackground">@drawable/game_big</item>  
+		<item name="android:windowNoTitle">true</item>          
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:actionDropDownStyle">@style/MyTheme.ActionBar.Dropdown</item>
+    </style>
+    <style name="MyTheme.ActionBar.Dropdown" parent="@android:style/TextAppearance.Holo.Widget.DropDownItem">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="SimpleProgressDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:textAppearance">@android:style/TextAppearance.DialogWindowTitle</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+    <style name="StyleProgressBarMini" parent="@android:style/Widget.ProgressBar.Horizontal">
+<item name="android:maxHeight">50dip</item>
+<item name="android:minHeight">10dip</item>
+<item name="android:indeterminateOnly">false</item>
+<item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+<item name="android:progressDrawable">@drawable/shape_progressbar_mini</item>
+</style>
+    <style name="Theme.CustomNoTitleTheme" parent="@android:style/Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+    <style name="Theme.SplashTheme" parent="@android:style/Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="alertDialogAnimationStyle">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+    <style name="alertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/alertDialogAnimationStyle</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="alert_dialog_frame_title">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="alert_dialog_progress_content1_dialog_msg_id">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    <style name="animFromBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+    <style name="customtitlebar" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+    <style name="dialogThemeForIOS" parent="@android:style/Theme.Holo.DialogWhenLarge">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowAnimationStyle">@style/animFromBottom</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item> 
+        <item name="android:windowNoTitle">true</item><!--除去title-->
+        <item name="android:windowContentOverlay">@null</item> 
+        <item name="android:windowBackground">@android:color/transparent</item><!-- 设置背景透明，以去除系统默认的黑色背景 -->  
+	</style>
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">  
+            <item name="android:windowFrame">@null</item>  
+            <item name="android:windowNoTitle">true</item>   
+            <item name="android:windowBackground">@drawable/load_dialog_bg</item>  
+            <item name="android:windowIsFloating">true</item>  
+            <item name="android:windowContentOverlay">@null</item>  
+        </style>
+    <style name="loginpage_check_box">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="myDialogTheme" parent="@android:style/Theme.Holo.DialogWhenLarge">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item> 
+        <item name="android:windowNoTitle">true</item><!--除去title-->
+        <item name="android:windowContentOverlay">@null</item> 
+        <item name="android:windowBackground">@android:color/transparent</item><!-- 设置背景透明，以去除系统默认的黑色背景 -->  
+        <item name="android:backgroundDimEnabled">false</item>
+	</style>
+    <style name="semi_transparent_white">
+        <item name="android:textColor">@color/semi_transparent_white</item>
+    </style>
+    <style name="soul_smart_school_theme_default" parent="@android:style/Theme">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textSize">18.0sp</item>
+    </style>
+    <style name="style_defaule_width2match_height2match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="style_defaule_width2match_height2wrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="style_defaule_width2wrap_height2wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="style_textview_tag">
+            <item name="android:textColor">@color/blue_one</item>
+            <item name="android:textSize">12sp</item>
+            <item name="android:layout_marginRight">8dp</item>
+	        <item name="android:layout_width">wrap_content</item>
+	        <item name="android:layout_height">wrap_content</item>
+        </style>
+    <style name="style_textview_value">
+            <item name="android:textColor">@color/black</item>
+            <item name="android:textSize">12sp</item>
+	        <item name="android:layout_width">wrap_content</item>
+	        <item name="android:layout_height">wrap_content</item>
+        </style>
+    <style name="top_title_text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16dip</item>
+    </style>
+</resources>

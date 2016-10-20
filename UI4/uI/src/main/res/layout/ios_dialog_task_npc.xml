@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ios_dialog_bg"
+    android:orientation="vertical" >
+
+    <com.soul.project.application.view.MTextView
+        android:id="@+id/txtTaskMester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="任务主人"
+        android:textColor="@color/blue_two"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_margin="10dp"
+        android:background="@color/ios_style_dialog_button_press_color" />
+
+    <com.soul.project.application.view.MTextView
+        android:id="@+id/txtTaskDescripe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="任务描述"
+        android:textColor="@color/blue_one" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ios_style_dialog_button_press_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_for_ios_style_dialog_selector"
+            android:text="左边"
+            android:textColor="@color/app_color_text_new"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/lineview"
+            android:layout_width="0.5dp"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:background="@color/ios_style_dialog_button_press_color" />
+
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_for_ios_style_dialog_selector"
+            android:text="右边"
+            android:visibility="gone"
+            android:textColor="@color/app_color_text_new"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

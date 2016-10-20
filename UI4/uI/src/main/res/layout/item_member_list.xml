@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.soul.project.application.view.MTextView
+            android:id="@+id/txtName"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:text="林岭东"
+            android:textColor="@color/blue_two"
+            android:textSize="16sp" />
+
+        <com.soul.project.application.view.MTextView
+            android:id="@+id/txtGrade"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:text="1级"
+            android:textColor="@color/black_light_title_text_color"
+            android:textSize="13sp" />
+
+        <com.soul.project.application.view.MTextView
+            android:id="@+id/txtIsOnLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="6dp"
+            android:text="在线"
+            android:textColor="@color/black_light_title_text_color"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnSendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/button_selector_green"
+            android:text="发消息"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btnDeleteOut"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/button_selector_mod_gender"
+            android:text="开除"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+        
+        <Button
+            android:id="@+id/btnThrough"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/button_selector_green"
+            android:text="通过"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+        
+        <Button
+            android:id="@+id/btnRefuse"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/button_selector_mod_gender"
+            android:text="拒绝"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/gray" />
+
+</LinearLayout>

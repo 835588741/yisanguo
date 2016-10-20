@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <com.soul.project.application.view.MTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="【驿站驿丞】：别看了，想拿白花花的银子，就得有黑乎乎的心，拿出实际行动吧，带上你的武器去追踪榜单上的人，这里的银子都是你的。"
+        android:textColor="@color/blue_two" />
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/postlist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:divider="@null" />
+
+    <!-- 菜单栏 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_bar_height"
+        android:background="#9de5f7"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnThings"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_selecctor"
+            android:gravity="center"
+            android:text="暗器"
+            android:textColor="@drawable/textview_selector"
+            android:textSize="@dimen/menu_bar_button_textsize"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnStatus"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_selecctor"
+            android:gravity="center"
+            android:text="技能"
+            android:textColor="@drawable/textview_selector"
+            android:textSize="@dimen/menu_bar_button_textsize"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="@dimen/button_width_big"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_selecctor"
+            android:gravity="center"
+            android:text="离开"
+            android:textColor="@drawable/textview_selector"
+            android:textSize="@dimen/menu_bar_button_textsize" />
+
+        <com.soul.project.application.view.MTextView
+            android:id="@+id/txtPlaceName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector_green"
+            android:gravity="center"
+            android:text="刷新一下"
+            android:textColor="@color/white"
+            android:textSize="@dimen/menu_bar_title_textsize" />
+
+        <Button
+            android:id="@+id/btnGoOut"
+            android:layout_width="@dimen/button_width_big"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_selecctor"
+            android:gravity="center"
+            android:text="悬赏"
+            android:textColor="@drawable/textview_selector"
+            android:textSize="@dimen/menu_bar_button_textsize" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <com.soul.project.application.view.MTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="交易价格选择"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/blue" />
+
+    <com.soul.project.application.view.MTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="3dp"
+        android:text="请为该物品选定一个交易价格，单位白银，交易价格最低价一两白银.(如果是拍卖的话，拍卖交易生效后，黑市会收取一定的佣金[10%-20%],收取的佣金最低一两白银，即如果拍卖价1两，则卖家不会获得收入，所以价值较比低的物品还是直接找人私下交易吧。)"
+        android:textColor="@color/gray_one"
+        android:textSize="13sp" />
+
+    <com.soul.project.application.view.MTextView
+        android:id="@+id/txtGname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text=""
+        android:textColor="@color/blue_one"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/etInputPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/border_of_layout"
+        android:gravity="center"
+        android:hint="请输入交易价格（单位：白银）"
+        android:inputType="number"
+        android:padding="6dp"
+        android:textColor="@color/red"
+        android:textColorHint="@color/gray_one"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector_green"
+            android:text="确定交易"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector_green"
+            android:text="取消交易"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

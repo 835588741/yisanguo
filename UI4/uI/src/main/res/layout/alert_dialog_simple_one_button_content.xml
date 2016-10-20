@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/RelativeLayout01"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView
+		android:gravity="left"
+		android:id="@+id/alert_dialog_msg_id"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/btn_pane"
+		android:layout_alignRight="@+id/btn_pane"
+		android:layout_marginLeft="18.0dip"
+		android:layout_marginRight="18.0dip"
+		android:layout_marginTop="15.0dip"
+		android:layout_marginBottom="15.0dip"
+		android:text="@+id/TextView01"
+		style="@style/alert_dialog_progress_content1_dialog_msg_id" />
+	<LinearLayout
+		android:id="@+id/btn_pane"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/alert_dialog_msg_id">
+		<Button
+			android:id="@+id/alert_dialog_ok_btn_id"
+			android:layout_width="240.0dip"
+			android:layout_height="40.0dip"
+			android:text="确定"
+			android:textColor="@android:color/white"
+			android:background="@drawable/button_selector"
+			android:layout_weight="1.0" 
+			android:layout_margin="3.0dip"/>
+	</LinearLayout>
+</RelativeLayout>
