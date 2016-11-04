@@ -38,8 +38,7 @@ public class DialogUtil implements OnClickListener
 	{
 		this.context = context;
 	}
-	
-	
+
     /** 
      * 得到自定义的progressDialog 
      * @param context 

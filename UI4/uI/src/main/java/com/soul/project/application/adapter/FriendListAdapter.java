@@ -5,25 +5,15 @@ package com.soul.project.application.adapter;
 
 import java.util.List;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import net.tsz.afinal.FinalHttp;
 import net.tsz.afinal.http.AjaxCallBack;
 import net.tsz.afinal.http.AjaxParams;
 
-import com.soul.project.application.bean.Friend;
-import com.soul.project.application.dialog.MessageDialog;
-import com.soul.project.application.util.ToastUtil;
-import com.soul.project.application.view.MTextView;
-import com.soul.project.story.activity.MyApplication;
-import com.soul.project.story.activity.PlayerPanelActivity;
-import com.soul.project.story.activity.R;
-import com.yisanguo.app.api.API;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,7 +21,15 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
+import com.soul.project.application.bean.Friend;
+import com.soul.project.application.bean.PersonDetailEntity.userdata;
+import com.soul.project.application.dialog.MessageDialog;
+import com.soul.project.application.util.ToastUtil;
+import com.soul.project.application.view.MTextView;
+import com.soul.project.story.activity.MyApplication;
+import com.soul.project.story.activity.R;
+import com.yisanguo.app.api.API;
 
 /**
  * @file FriendListAdapter.java
@@ -46,9 +44,11 @@ public class FriendListAdapter extends BaseAdapter
 	FinalHttp finalHttp;
 	List<Friend> friends;
 	LayoutInflater inflater;
+	int usetype;
 	
-	public FriendListAdapter(Context context,List<Friend> friends)
+	public FriendListAdapter(Context context,List<Friend> friends, int type)
 	{
+		this.usetype = type;
 		this.finalHttp = new FinalHttp();
 		this.finalHttp.configTimeout(8000);
 		this.context = context;
@@ -112,6 +112,11 @@ public class FriendListAdapter extends BaseAdapter
 		holder.txtFname.setText(friend.getFname());
 		holder.txtFstate.setText((friend.getState() == 2 ? "离线":"在线"));
 		
+		if(usetype==2)
+		{
+			holder.txtFstate.setText("未知");
+			holder.btnDeleteFriend.setText("移出黑名单");
+		}
 		holder.btnDeleteFriend.setOnClickListener(new Event(position, 2, friend.getFuuid()));
 		holder.btnSendMessage.setOnClickListener(new Event(position, 1, friend.getFuuid()));
 		
@@ -144,7 +149,16 @@ public class FriendListAdapter extends BaseAdapter
 			// 删除好友
 			else if(type==2)
 			{
-				finalHttp.get(API.URL+"deletefriend.action?fuuid="+uuid+"&buuid="+MyApplication.getUUID(context),new AjaxCallBack<Object>()
+				String url;
+				if(usetype == 1)
+				{
+					url = API.URL+"deletefriend.action?&fuuid="+uuid+"&buuid="+MyApplication.getUUID(context);
+				}
+				else
+				{
+					url = API.MESSAGE_REQUEST+"deletefromblack.action?&targetuuid="+uuid+"&uuid="+MyApplication.getUUID(context);
+				}
+				finalHttp.get(url,new AjaxCallBack<Object>()
 				{
 					Dialog dialog;
 					@Override

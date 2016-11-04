@@ -1,5 +1,7 @@
 <resources>
 	<color name="app_color">#3ec3b2</color>
+	<color name="red">#ffff0000</color>
+    <color name="white">#ffffffff</color>
     <color name="white_one">#ffd2d2d2</color>
     <color name="gray_one">#cf7f7f7f</color>
     <color name="gray_two">#515151</color>

@@ -817,7 +817,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_selecctor"
                 android:gravity="center"
-                android:text="回城"
+                android:text="传送"
                 android:textColor="@drawable/textview_selector"
                 android:textSize="@dimen/menu_bar_button_textsize" />
 

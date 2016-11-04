@@ -1,27 +1,30 @@
 package com.soul.project.application.adapter;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.List;
-
-import org.json.JSONObject;
 
 import net.tsz.afinal.FinalHttp;
 import net.tsz.afinal.http.AjaxCallBack;
 import net.tsz.afinal.http.AjaxParams;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.content.Context;
-import android.util.Log;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.webkit.WebView.FindListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.soul.project.application.bean.message;
+import com.soul.project.application.dialog.MessageDialog;
 import com.soul.project.application.util.ToastUtil;
 import com.soul.project.application.view.MTextView;
 import com.soul.project.story.activity.MyApplication;
@@ -34,6 +37,7 @@ public class MessageListAdapter extends BaseAdapter
 	private List<message> list;
 	private LayoutInflater inflater;
 	protected FinalHttp finalHttp;
+//	private Button btnAddBlackList;
 	
 	public MessageListAdapter(Context context,List<message> list)
 	{
@@ -89,6 +93,7 @@ public class MessageListAdapter extends BaseAdapter
 			holder.txtMessageReplay = (MTextView)convertView.findViewById(R.id.txtMessageReplay);
 			holder.txtSenderName = (MTextView)convertView.findViewById(R.id.txtSenderName);
 			holder.txtSendTime = (MTextView)convertView.findViewById(R.id.txtSendTime);
+			holder.btnAddBlackList = (Button)convertView.findViewById(R.id.btnAddBlackList);
 			convertView.setTag(holder);
 		}
 		else
@@ -124,7 +129,7 @@ public class MessageListAdapter extends BaseAdapter
 		holder.txtSenderName.setText(m.getSendername());
 		holder.txtSendTime.setText(m.getSendtime());
 		holder.btnReplay.setOnClickListener(new Event(1,m));
-		
+		holder.btnAddBlackList.setOnClickListener(new Event(5, m));
 		return convertView;
 	}
 	
@@ -135,6 +140,7 @@ public class MessageListAdapter extends BaseAdapter
 		MTextView txtMessage;
 		MTextView txtMessageReplay;
 		Button btnReplay;
+		Button btnAddBlackList;
 	}
 
 	private class Event implements OnClickListener
@@ -154,6 +160,22 @@ public class MessageListAdapter extends BaseAdapter
 			{
 				showIOSDialog(2, m);
 			}
+			else if(type == 5)
+			{
+				Builder builder = new Builder(context);
+				builder.setTitle("提示");
+				builder.setMessage("是否确定将对方添加到黑名单？(加入黑名单你和对方不能再互发消息)");
+				builder.setPositiveButton("确定", new DialogInterface.OnClickListener()
+				{
+					@Override
+					public void onClick(DialogInterface dialog, int which)
+					{
+						addBlackList(m.getSenderid());
+					}
+				});
+				builder.setNegativeButton("取消", null);
+				builder.show();
+			}
 			else
 			{
 				if(v.getId() == R.id.btn1)
@@ -170,6 +192,54 @@ public class MessageListAdapter extends BaseAdapter
 				}
 			}
 		}
+	}
+	
+	private void addBlackList(String senderid)
+	{
+		finalHttp.get(API.MESSAGE_REQUEST+"pullblacelist.action?&uuid="+MyApplication.getUUID(context)+"&targetuuid="+senderid, new AjaxCallBack<Object>()
+		{
+			Dialog dialog;
+			@Override
+			public void onFailure(Throwable t, int errorNo, String strMsg)
+			{
+				// TODO Auto-generated method stub
+				super.onFailure(t, errorNo, strMsg);
+				dialog.dismiss();
+			}
+
+			@Override
+			public void onStart()
+			{
+				// TODO Auto-generated method stub
+				super.onStart();
+				dialog = MessageDialog.createLoadingDialog(context, "请求服务器中...");
+				dialog.show();
+			}
+
+			@Override
+			public void onSuccess(Object t)
+			{
+				// TODO Auto-generated method stub
+				super.onSuccess(t);
+				dialog.dismiss();
+				if(t!=null)
+				{
+					JSONObject jsonObject;
+					try
+					{
+						jsonObject = new JSONObject(t.toString());
+						String mes = jsonObject.getString("message");
+						if(mes != null)
+							ToastUtil.showStaticToastShort(context, mes);
+					}
+					catch (JSONException e)
+					{
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		});
 	}
 	
 	Dialog dialogIOS;

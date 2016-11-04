@@ -39,7 +39,7 @@
                 android:layout_height="38dp"
                 android:background="@drawable/button_selector_normalblue_pressgray"
                 android:gravity="center"
-                android:text="更换任务（10两银子一次）"
+                android:text="更换任务（5两银子一次）"
                 android:textColor="@color/white"
                 android:textSize="@dimen/menu_bar_button_textsize_big" />
 

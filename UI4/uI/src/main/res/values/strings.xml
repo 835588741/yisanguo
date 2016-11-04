@@ -33,6 +33,11 @@
     <string name="tip_answer">** 请输入答案 **</string>
     <string name="tip_submit"> 提交答案 </string>
     <string name="tip_valid_desc">请于35秒内完成下面的测试题,填写好答案并提交,否则可能被认为存在外挂行为,35秒后自动关闭。</string>
+
+    <string name="text001">【 解锋镝  封地 】</string>
+
+
     <string name="title_activity_myself_houser">MyselfHouserActivity</string>
+    <string name="title_activity_feng_di">FengDiActivity</string>
 
 </resources>

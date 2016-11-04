@@ -11,6 +11,7 @@ import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -34,6 +35,7 @@ import com.soul.project.application.adapter.GoodsListAdapter;
 import com.soul.project.application.bean.Goods;
 import com.soul.project.application.dialog.MessageDialog;
 import com.soul.project.application.util.ActivityUtil;
+import com.soul.project.application.util.ResponeUtil;
 import com.soul.project.application.util.ShareDB;
 import com.soul.project.application.util.ToastUtil;
 import com.soul.project.application.view.MTextView;
@@ -403,110 +405,157 @@ public class GoodsListActivty extends BaseActivityWithSystemBarColor implements 
 		}
 		else if(activityType == 1025)
 		{
-			finalHttp.get(API.URL2+"repair.action?&uuid="+MyApplication.getUUID(this)+"&gid="+gid, new AjaxCallBack<Object>()
+			Builder builder = new Builder(GoodsListActivty.this);
+			builder.setItems(new String[]{"用银钱维修","使用续灵宝石"}, new DialogInterface.OnClickListener()
 			{
-				Dialog dialog;
+				
 				@Override
-				public void onFailure(Throwable t, int errorNo, String strMsg)
+				public void onClick(DialogInterface dialog, int which)
 				{
-					// TODO Auto-generated method stub
-					super.onFailure(t, errorNo, strMsg);
-					dialog.dismiss();
-				}
-
-				@Override
-				public void onStart()
-				{
-					// TODO Auto-generated method stub
-					super.onStart();
-					dialog = MessageDialog.createLoadingDialog(GoodsListActivty.this, "获取维修价格中...");
-					dialog.show();
-				}
-
-				@Override
-				public void onSuccess(Object t)
-				{
-					// TODO Auto-generated method stub
-					super.onSuccess(t);
-					dialog.dismiss();
-					
-					if(t != null)
+					if(which == 0)
 					{
-						try
-						{
-							JSONObject jsonObject = new JSONObject(t.toString());
-							int code = jsonObject.getInt("code");
-							String mes = jsonObject.getString("message");
-							if(code == 200)
-							{
-								Builder builder = new Builder(GoodsListActivty.this);
-								builder.setTitle("维修报价");
-								if(mes != null)
-								builder.setMessage(mes);
-								builder.setNegativeButton("我要维修", new android.content.DialogInterface.OnClickListener()
+						finalHttp.get(API.URL2+"repair.action?&uuid="+MyApplication.getUUID(GoodsListActivty.this)+"&gid="+gid, new AjaxCallBack<Object>()
 								{
+									Dialog dialog;
 									@Override
-									public void onClick(DialogInterface dialog, int which)
+									public void onFailure(Throwable t, int errorNo, String strMsg)
 									{
 										// TODO Auto-generated method stub
-										finalHttp.get(API.URL2+"repairconfirm.action?&uuid="+MyApplication.getUUID(GoodsListActivty.this)+"&gid="+gid, new AjaxCallBack<Object>()
+										super.onFailure(t, errorNo, strMsg);
+										dialog.dismiss();
+									}
+
+									@Override
+									public void onStart()
+									{
+										// TODO Auto-generated method stub
+										super.onStart();
+										dialog = MessageDialog.createLoadingDialog(GoodsListActivty.this, "获取维修价格中...");
+										dialog.show();
+									}
+
+									@Override
+									public void onSuccess(Object t)
+									{
+										// TODO Auto-generated method stub
+										super.onSuccess(t);
+										dialog.dismiss();
+										
+										if(t != null)
 										{
-											@Override
-											public void onFailure(Throwable t, int errorNo, String strMsg)
+											try
 											{
-												// TODO Auto-generated method stub
-												super.onFailure(t, errorNo, strMsg);
-												ToastUtil.showShort(GoodsListActivty.this, "维修失败");
-											}
-
-											@Override
-											public void onStart()
-											{
-												// TODO Auto-generated method stub
-												super.onStart();
-											}
-
-											@Override
-											public void onSuccess(Object t)
-											{
-												// TODO Auto-generated method stub
-												super.onSuccess(t);
-												if(t != null)
+												JSONObject jsonObject = new JSONObject(t.toString());
+												int code = jsonObject.getInt("code");
+												String mes = jsonObject.getString("message");
+												if(code == 200)
 												{
-													try
+													Builder builder = new Builder(GoodsListActivty.this);
+													builder.setTitle("维修报价");
+													if(mes != null)
+													builder.setMessage(mes);
+													builder.setNegativeButton("我要维修", new android.content.DialogInterface.OnClickListener()
 													{
-														JSONObject jsonObject = new JSONObject(t.toString());
-														String mes = jsonObject.getString("message");
-														if(mes != null)
-															ToastUtil.showShort(GoodsListActivty.this, mes);
-													}
-													catch (JSONException e)
-													{
-														// TODO Auto-generated catch block
-														e.printStackTrace();
-													}
+														@Override
+														public void onClick(DialogInterface dialog, int which)
+														{
+															// TODO Auto-generated method stub
+															finalHttp.get(API.URL2+"repairconfirm.action?&uuid="+MyApplication.getUUID(GoodsListActivty.this)+"&gid="+gid, new AjaxCallBack<Object>()
+															{
+																@Override
+																public void onFailure(Throwable t, int errorNo, String strMsg)
+																{
+																	// TODO Auto-generated method stub
+																	super.onFailure(t, errorNo, strMsg);
+																	ToastUtil.showShort(GoodsListActivty.this, "维修失败");
+																}
+
+																@Override
+																public void onStart()
+																{
+																	// TODO Auto-generated method stub
+																	super.onStart();
+																}
+
+																@Override
+																public void onSuccess(Object t)
+																{
+																	// TODO Auto-generated method stub
+																	super.onSuccess(t);
+																	if(t != null)
+																	{
+																		try
+																		{
+																			JSONObject jsonObject = new JSONObject(t.toString());
+																			String mes = jsonObject.getString("message");
+																			if(mes != null)
+																				ToastUtil.showShort(GoodsListActivty.this, mes);
+																		}
+																		catch (JSONException e)
+																		{
+																			// TODO Auto-generated catch block
+																			e.printStackTrace();
+																		}
+																	}
+																}
+															});
+														}
+													});
+													builder.setPositiveButton("我不修了", null);
+													builder.show();
+												}
+												else
+												{
+													if(mes != null)
+													ToastUtil.showStaticToast(GoodsListActivty.this, mes);
 												}
 											}
-										});
+											catch (JSONException e)
+											{
+												// TODO Auto-generated catch block
+												e.printStackTrace();
+											}
+										}
 									}
 								});
-								builder.setPositiveButton("我不修了", null);
-								builder.show();
-							}
-							else
-							{
-								if(mes != null)
-								ToastUtil.showStaticToast(GoodsListActivty.this, mes);
-							}
-						}
-						catch (JSONException e)
+					}
+					else if(which == 1)
+					{
+						finalHttp.get(API.URL2+"repairbyxlbs.action?&uuid="+MyApplication.getUUID(GoodsListActivty.this)+"&gid="+gid, new AjaxCallBack<Object>()
 						{
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+							Dialog dialog;
+							@Override
+							public void onFailure(Throwable t, int errorNo, String strMsg)
+							{
+								// TODO Auto-generated method stub
+								super.onFailure(t, errorNo, strMsg);
+								dialog.dismiss();
+							}
+
+							@Override
+							public void onStart()
+							{
+								// TODO Auto-generated method stub
+								super.onStart();
+								dialog = MessageDialog.createLoadingDialog(GoodsListActivty.this, "请求服务器中...");
+								dialog.show();
+							}
+
+							@Override
+							public void onSuccess(Object t)
+							{
+								// TODO Auto-generated method stub
+								super.onSuccess(t);
+								dialog.dismiss();
+								ResponeUtil.getInstance().analysis(GoodsListActivty.this, t);
+							}
+						});
 					}
 				}
 			});
+			builder.setTitle("请选择维修类型");
+			builder.setNegativeButton("取消", null);
+			builder.show();
 		}
 		else if(activityType == 1026)
 		{

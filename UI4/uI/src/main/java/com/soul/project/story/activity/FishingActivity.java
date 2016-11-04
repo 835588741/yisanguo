@@ -114,6 +114,8 @@ public class FishingActivity extends BaseActivityWithSystemBarColor implements O
 		});
 	}
 
+	long start = 0;
+	long stop = 0;
 	@Override
 	public void onClick(View v)
 	{
@@ -121,7 +123,17 @@ public class FishingActivity extends BaseActivityWithSystemBarColor implements O
 		{
 			case R.id.btnGetL:
 			case R.id.btnGetR:
-				loadData(0, 2);
+
+				start = System.currentTimeMillis();
+				if(start - stop > 1200)
+				{
+					loadData(0, 2);
+					stop = start;
+				}
+				else
+				{
+					txtInfo.setText("垂钓者切忌心浮气躁");
+				}
 				break;
 			case R.id.btnReturn:
 				finish();

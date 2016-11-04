@@ -34,6 +34,7 @@ import com.soul.project.application.util.ShareDB;
 import com.soul.project.application.util.ToastUtil;
 import com.soul.project.application.util.Utils;
 import com.soul.project.application.view.MTextView;
+import com.soul.project.application.view.MyProgress;
 import com.yisanguo.app.api.API;
 
 /**
@@ -68,6 +69,12 @@ public class BattleActivity extends BaseActivityWithSystemBarColor implements On
 	private EditText txtChatInputTest;
 	private TextView txtChatTestPosition;
 	private TextView txtChatTestName;
+	
+	private MTextView txtAttackerName;
+	private MTextView txtDefencerName;
+	private MyProgress pbAttackerHP;
+	private MyProgress pbDefencerHP;
+	
 	boolean isCanSendMessage = true;
 	private int delayTime = 8500;
 	
@@ -140,6 +147,12 @@ public class BattleActivity extends BaseActivityWithSystemBarColor implements On
 
 	private void initViews()
 	{
+		// hp show
+		txtAttackerName = (MTextView)this.findViewById(R.id.txtAttackerName);
+		txtDefencerName = (MTextView)this.findViewById(R.id.txtDefencerName);
+		pbAttackerHP = (MyProgress)this.findViewById(R.id.pbAttackerHP);
+		pbDefencerHP = (MyProgress)this.findViewById(R.id.pbDefencerHP);
+		
 		rootLayout = (RelativeLayout)this.findViewById(R.id.rootLayout);
 		progressBar = (ProgressBar) this.findViewById(R.id.progress);
 		btnGoOut = (Button) this.findViewById(R.id.btnGoOut);
@@ -218,6 +231,26 @@ public class BattleActivity extends BaseActivityWithSystemBarColor implements On
 							{
 								JSONObject object = new JSONObject(t.toString());
 								state = object.getInt("statecode");
+								
+								try
+								{
+									String an = object.getString("attackername");
+									String dn = object.getString("defencername");
+									int ah = object.getInt("attackerhp");
+									int dh = object.getInt("defencerhp");
+									int at = object.getInt("at");
+									int dt = object.getInt("dt");
+									txtAttackerName.setText(an);
+									txtDefencerName.setText(dn);
+									pbAttackerHP.setProgress(ah);
+									pbDefencerHP.setProgress(dh);
+									pbAttackerHP.setText(at);
+									pbDefencerHP.setText(dt);
+								}
+								catch (JSONException e)
+								{
+								}
+								
 								// 不能杀害本城之人
 								if(object != null && object.getInt("code")==205)
 								{
@@ -305,21 +338,6 @@ public class BattleActivity extends BaseActivityWithSystemBarColor implements On
 										}
 									}
 								}
-
-
-								// if(state == 0)
-								// {
-								// finish();
-								// ToastUtil.show(BattleActivity.this, temp);
-								// }
-
-								// Log.i("XU", "temp = "+temp);
-
-								// over battle
-								// if(state == 0)
-								// {
-								// isCanClick = false;
-								// }
 							}
 							catch (JSONException e)
 							{

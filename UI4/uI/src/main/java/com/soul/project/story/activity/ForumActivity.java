@@ -64,7 +64,7 @@ public class ForumActivity extends BaseActivityWithSystemBarColor implements OnI
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_forum);
-		ToastUtil.show(this, "【论坛管理员（解锋镝,苏颜沫,风流骑士）,严禁黄赌毒,请共同维护论坛文明秩序。】");
+		ToastUtil.showStaticToastShort(this, "【论坛管理员（解锋镝,苏颜沫,风流骑士）,严禁黄赌毒,请共同维护论坛文明秩序。】");
 		initViews();
 		loadData(0,0);
 	}

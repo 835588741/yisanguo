@@ -27,7 +27,6 @@ public class MessageListAcrtivity extends BaseActivityWithSystemBarColor impleme
 	MTextView txtPlaceName;
 	Button btnLeft;
 	Button btnRight;
-//	ArrayList<message> list = new ArrayList<message>(); 
 	MessageListAdapter adapter;
 	LinearLayout rootLayout;
 	
@@ -37,7 +36,6 @@ public class MessageListAcrtivity extends BaseActivityWithSystemBarColor impleme
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_goods);
-//		list =
 		loadData(0,0);
 		initViews();
 	}

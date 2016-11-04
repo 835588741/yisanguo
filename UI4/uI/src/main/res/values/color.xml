@@ -15,6 +15,7 @@
     <color name="sea_blue">#32cd99</color>
     <!-- 石板蓝 -->
     <color name="store_blue">#007FFF</color>
+    <!--<color name="white">#FFFFFF</color>-->
  <!-- 白色 -->
     <color name="ivory">#FFFFF0</color>
  <!-- 象牙色 -->
@@ -65,15 +66,18 @@
     <color name="hotpink">#FF69B4</color>
  <!-- 热粉红色 -->
     <color name="tomato">#FF6347</color>
- <!-- 西红柿色 -->
-    <color name="orangered">#FF4500</color>
+ <!--&lt;!&ndash; 西红柿色 &ndash;&gt;-->
+    <!--<color name="orangered">#FF4500</color>-->
  <!-- 红橙色 -->
     <color name="deeppink">#FF1493</color>
  <!-- 深粉红色 -->
     <color name="fuchsia">#FF00FF</color>
  <!-- 紫红色 -->
     <color name="magenta">#FF00FF</color>
-
+ <!--&lt;!&ndash; 红紫色 &ndash;&gt;-->
+    <!--<color name="red">#FF0000</color>-->
+    <!-- 西红柿色 -->
+    <color name="orangered">#FF4500</color>
  <!-- 红色 -->
     <color name="oldlace">#FDF5E6</color>
  <!-- 老花色 -->

@@ -6,11 +6,11 @@ public interface API {
 	// http://192.168.245.1:8080/springMVC/requestAction/battle.action?&table=post&condition=null&type=1&page=1&pagesize=2
 	//.http://wlgac420108.jsp.jspee.org/requestAction/sendmessage.action?&account=835588741&password=xsy341341
 	//"192.168.30.136:8080/springMVC/"
-	// http://169.254.85.186:8080/springMVC/requestGroup/getgrouplist.action?
+	// http://192.168.30.136:8080/springMVC/requestGroup/getgrouplist.action?
 	//http://112.124.109.206:8080/springMVC/requestAction/ranking.action?&order=grade
 	// 112.124.109.206   192.168.30.136
 	/** HOST 主机**/
-	String Host = "112.124.109.206:8080/springMVC";//"wlgac420108.jsp.jspee.org";  // ||localhost:8080
+	String Host = "192.168.30.136:8080/springMVC";//"wlgac420108.jsp.jspee.org";  // ||localhost:8080
 	String TEAM_REQUEST = "http://"+API.Host+"/organizeteamAction/"; 
 	String FORM_REQUEST = "http://"+API.Host+"/formAction/";
 	String MESSAGE_REQUEST = "http://"+API.Host+"/messageAction/";

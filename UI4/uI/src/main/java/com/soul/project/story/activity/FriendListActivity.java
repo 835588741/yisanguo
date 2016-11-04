@@ -3,6 +3,9 @@ package com.soul.project.story.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import net.tsz.afinal.http.AjaxCallBack;
 import android.app.Dialog;
 import android.os.Bundle;
@@ -37,10 +40,12 @@ public class FriendListActivity extends BaseActivityWithSystemBarColor implement
 	SwipeMenuListView friendlist;
 	private Handler mHandler = new Handler();
 	List<Friend> list = new ArrayList<Friend>();
+	List<Friend> listBlack = new ArrayList<Friend>();
 	FriendListAdapter adapter;
 	Button btnLeft;
-	Button btnRight;
+	Button btnBlackList;
 	MTextView txtNumber;
+	boolean isBlackListMode = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -56,10 +61,10 @@ public class FriendListActivity extends BaseActivityWithSystemBarColor implement
 	private void initView()
 	{
 		btnLeft = (Button)this.findViewById(R.id.btnLeft);
-		btnRight= (Button)this.findViewById(R.id.btnRight);
+		btnBlackList= (Button)this.findViewById(R.id.btnBlackList);
 		
 		btnLeft.setOnClickListener(this);
-		btnRight.setOnClickListener(this);
+		btnBlackList.setOnClickListener(this);
 		
 		txtNumber = (MTextView)this.findViewById(R.id.txtNumber);
 		
@@ -77,53 +82,71 @@ public class FriendListActivity extends BaseActivityWithSystemBarColor implement
 	@Override
 	public void loadData(int id, int type)
 	{
-		finalHttp.get(API.URL+"getfriendlist.action?&uuid="+MyApplication.getUUID(this), new AjaxCallBack<Object>()
+		if(list == null || list.size() == 0)
 		{
-			Dialog dialog;
-			@Override
-			public void onFailure(Throwable t, int errorNo, String strMsg)
-			{
-				// TODO Auto-generated method stub
-				super.onFailure(t, errorNo, strMsg);
-				dialog.dismiss();
-			}
-
-			@Override
-			public void onStart()
-			{
-				// TODO Auto-generated method stub
-				super.onStart();
-				dialog = MessageDialog.createLoadingDialog(FriendListActivity.this, "获取朋友列表中...");
-				dialog.show();
-			}
-
-			@Override
-			public void onSuccess(Object t)
-			{
-				// TODO Auto-generated method stub
-				super.onSuccess(t);
-				dialog.dismiss();
-				if(t != null)
-				{
-					Gson gson = new Gson();
-					list = gson.fromJson(t.toString(), new TypeToken<List<Friend>>() {}.getType());
-					adapter = new FriendListAdapter(FriendListActivity.this, list);
-					friendlist.setAdapter(adapter);
-					if(list != null)
+			finalHttp.get(API.URL+"getfriendlist.action?&uuid="+MyApplication.getUUID(this), new AjaxCallBack<Object>()
 					{
-						int onlineCount = 0;
-						for (int i = 0; i < list.size(); i++)
+						Dialog dialog;
+						@Override
+						public void onFailure(Throwable t, int errorNo, String strMsg)
 						{
-							if(list.get(i).getState() == 1)
-								onlineCount ++;
+							// TODO Auto-generated method stub
+							super.onFailure(t, errorNo, strMsg);
+							dialog.dismiss();
 						}
-						
-						String numberCount =  onlineCount+" / "+list.size();
-						txtNumber.setText(numberCount);
-					}
-				}
+
+						@Override
+						public void onStart()
+						{
+							// TODO Auto-generated method stub
+							super.onStart();
+							dialog = MessageDialog.createLoadingDialog(FriendListActivity.this, "获取朋友列表中...");
+							dialog.show();
+						}
+
+						@Override
+						public void onSuccess(Object t)
+						{
+							// TODO Auto-generated method stub
+							super.onSuccess(t);
+							dialog.dismiss();
+							if(t != null)
+							{
+								Gson gson = new Gson();
+								list = gson.fromJson(t.toString(), new TypeToken<List<Friend>>() {}.getType());
+								adapter = new FriendListAdapter(FriendListActivity.this, list,1);
+								friendlist.setAdapter(adapter);
+								if(list != null)
+								{
+									int onlineCount = 0;
+									for (int i = 0; i < list.size(); i++)
+									{
+										if(list.get(i).getState() == 1)
+											onlineCount ++;
+									}
+									
+									String numberCount =  onlineCount+" / "+list.size();
+									txtNumber.setText(numberCount);
+								}
+							}
+						}
+					});
+		}
+		else
+		{
+			int onlineCount = 0;
+			for (int i = 0; i < list.size(); i++)
+			{
+				if(list.get(i).getState() == 1)
+					onlineCount ++;
 			}
-		});
+			
+			String numberCount =  onlineCount+" / "+list.size();
+			txtNumber.setText(numberCount);
+			
+			adapter = new FriendListAdapter(FriendListActivity.this, list,1);
+			friendlist.setAdapter(adapter);
+		}
 	}
 
 	@Override
@@ -175,11 +198,101 @@ public class FriendListActivity extends BaseActivityWithSystemBarColor implement
 			case R.id.btnLeft:
 				finish();
 				break;
-			case R.id.btnRight:
-				finish();
+			case R.id.btnBlackList:
+				if(isBlackListMode)
+				{
+					btnBlackList.setText("黑名单");
+					loadData(1, 1);
+				}
+				else
+				{
+					btnBlackList.setText("好友单");
+					getBlackList();
+				}
+				isBlackListMode = !isBlackListMode;
 				break;
 			default:
 				break;
+		}
+	}
+
+	private void getBlackList()
+	{
+		if(listBlack == null || listBlack.size()==0)
+		{
+			finalHttp.get(API.MESSAGE_REQUEST+"getblacklist.action?&uuid="+MyApplication.getUUID(this), new AjaxCallBack<Object>()
+					{
+						Dialog dialog;
+						@Override
+						public void onFailure(Throwable t, int errorNo, String strMsg)
+						{
+							// TODO Auto-generated method stub
+							super.onFailure(t, errorNo, strMsg);
+							dialog.dismiss();
+							Log.i("XU", "黑单数据失败"+strMsg);
+						}
+
+						@Override
+						public void onStart()
+						{
+							// TODO Auto-generated method stub
+							super.onStart();
+							dialog = MessageDialog.createLoadingDialog(FriendListActivity.this, "获取黑名单中...");
+							dialog.show();
+						}
+
+						@Override
+						public void onSuccess(Object t)
+						{
+							// TODO Auto-generated method stub
+							super.onSuccess(t);
+							dialog.dismiss();
+							if(t != null)
+							{
+								try
+								{
+									JSONObject jsonObject = new JSONObject(t.toString());
+									String data = jsonObject.getString("data");
+									Gson gson = new Gson();
+									listBlack = gson.fromJson(data, new TypeToken<List<Friend>>() {}.getType());
+									adapter = new FriendListAdapter(FriendListActivity.this, listBlack,2);
+									friendlist.setAdapter(adapter);
+									if(listBlack != null)
+									{
+										int onlineCount = 0;
+										for (int i = 0; i < listBlack.size(); i++)
+										{
+											if(listBlack.get(i).getState() == 1)
+												onlineCount ++;
+										}
+										
+										String numberCount =  onlineCount+" / "+listBlack.size();
+										txtNumber.setText(numberCount);
+									}
+								}
+								catch (JSONException e)
+								{
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+								
+							}
+						}
+					});
+		}	
+		else
+		{
+			int onlineCount = 0;
+			for (int i = 0; i < listBlack.size(); i++)
+			{
+				if(listBlack.get(i).getState() == 1)
+					onlineCount ++;
+			}
+			String numberCount =  onlineCount+" / "+listBlack.size();
+			
+			txtNumber.setText(numberCount);
+			adapter = new FriendListAdapter(FriendListActivity.this, listBlack,2);
+			friendlist.setAdapter(adapter);
 		}
 	}
 }

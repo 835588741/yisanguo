@@ -83,7 +83,7 @@ import com.yisanguo.app.api.API;
 		{
 			if(user == null)
 			{
-				reload();
+				reload(context);
 				//ActivityUtil.goToNewActivity((Activity) context, LoginActivity.class);
 			}
 //			else
@@ -151,7 +151,7 @@ import com.yisanguo.app.api.API;
 //				}
 //			});
 //		}
-		private static void reload()
+		private static void reload(final Context context)
 		{
 			String user_account = ShareDB.getStringFromDB(context, "user_account");
 			String user_password= ShareDB.getStringFromDB(context, "user_password");

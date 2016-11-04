@@ -158,7 +158,7 @@ public class CommentListAdapter extends BaseAdapter
 				holder.txtGag.setVisibility(View.VISIBLE);
 				holder.txtDelete.setVisibility(View.VISIBLE);
 				
-				holder.txtDelete.setOnClickListener(new EventDel(position, comment.getCommenterid(), comment.getCid(), null, 1));
+				holder.txtDelete.setOnClickListener(new EventDel(position, comment.getCommenterid(), comment.getCid(), pid, 1));
 				// 缺少一个禁封的功能
 			}
 			else
@@ -312,6 +312,7 @@ public class CommentListAdapter extends BaseAdapter
 		
 		public EventDel(int position,String targetUUID, String commentid,String postid,int type)
 		{
+			Log.i("XU", "xxx pid="+postid);
 			this.type = type;
 			this.postid = postid;
 			this.commentid = commentid;
@@ -324,6 +325,7 @@ public class CommentListAdapter extends BaseAdapter
 		{
 			if(type == 1 && v.getId() == R.id.txtDelete)
 			{
+				Log.i("XU", "xushiyong  pid = "+postid);
 				finalHttp.get(API.FORM_REQUEST+"deletecomment.action?&commentid="+commentid+"&belongpostid="+postid+"&managerid="+MyApplication.getUUID(context), new AjaxCallBack<Object>()
 				{
 					Dialog dialog;

@@ -75,6 +75,16 @@
         />
     
     <Button 
+        android:id="@+id/btnAddBlackList"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="拉黑此人"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/button_selector_normalblue_pressgray"
+        android:textSize="10sp"
+        />
+    
+    <Button 
         android:id="@+id/btnReplay"
         android:layout_width="wrap_content"
         android:layout_height="25dp"

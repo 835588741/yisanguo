@@ -106,6 +106,71 @@
                     android:textSize="10sp" />
             </LinearLayout>
         </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp"
+            >
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtAttackerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:text="【进攻者】"
+                android:textSize="13sp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/red"
+                />
+            <com.soul.project.application.view.MyProgress 
+                android:id="@+id/pbAttackerHP"
+                android:layout_width="0dp"
+                android:layout_weight="0.55"
+                style="@style/StyleProgressBarHP"
+                android:background="@drawable/shape_progressbar_bg"
+                android:progress="100"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>  
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="5dp"
+            >
+            <com.soul.project.application.view.MTextView
+                android:id="@+id/txtDefencerName"
+                android:layout_width="0dp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:text="【防御者】"
+                android:textSize="13sp"
+                android:textColor="@color/blue"
+                />
+            <com.soul.project.application.view.MyProgress 
+                android:id="@+id/pbDefencerHP"
+                android:layout_width="0dp"
+                android:layout_weight="0.55"
+                style="@style/StyleProgressBarHP"
+                android:background="@drawable/shape_progressbar_bg"
+                android:progress="100"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout> 
+        
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black"
+            />
             
     <ScrollView 
     android:layout_width="match_parent"
