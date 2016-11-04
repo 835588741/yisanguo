@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Dialog - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+	<script type="text/javascript">
+		$(function()
+		{
+			$("#dd").dialog(
+			{
+				title: "myFirstdialog",
+				collapsible: true,
+				minimizable: true,
+				maximizable: true,
+				resizable: true,
+				toolbar: [{
+					text: "add",
+					iconCls: "icon-add",
+
+				},{
+					text: "save",
+					iconCls: "icon-save",
+				}],
+			});	
+			
+			$("#date").window({
+				
+			});
+		});
+	</script>
+</head>
+<body>
+	
+	<div id="dd" title="Mydialog" style="width:200px;height:250px">
+		my first dialog
+	</div>
+
+	<div id="date" title="mywindow" style="width:200px;height:250px">
+			
+	</div>
+</body>
+</html>

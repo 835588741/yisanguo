@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Dialog - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+	<script type="text/javascript">
+		$(function()
+		{
+			$("#dd").dialog(
+			{
+				title: "myFirstdialog",
+				collapsible: true,
+				minimizable: true,
+				maximizable: true,
+				resizable: true,
+				toolbar: [{
+					text: "add",
+					iconCls: "icon-add",
+
+				},{
+					text: "save",
+					iconCls: "icon-save",
+				}],
+			});	
+			
+			$("#date").datebox({
+				
+			});
+		});
+		function get() 
+			{
+				$("#date").datebox("getValue");
+			}
+
+	</script>
+</head>
+<body>
+	
+	<div style="margin:10px 0;" id="getd">
+		<a href="#" class="easyui-linkbutton" onclick="open1()">Open</a>
+		<a href="#" class="easyui-linkbutton" onclick="get();">get</a>
+	</div>
+
+	<div id="dd" title="Mydialog" style="width:200px;height:250px">
+		<div id="date" title="mydate" style="width:300px;height:250px">
+		date
+	</div>
+	</div>
+
+	
+</body>
+</html>
