@@ -57,12 +57,27 @@ public class MySQLOprea {
 	
 	public String rest(String uuid)
 	{
+		String repanse = "你轻松地住店休息了一会，体力已经恢复了。";
 		try
 		{
-			SqlRowSet rowSet = jdbcTemplate.queryForRowSet("select areaid from person where uuid='"+uuid+"'");
+			SqlRowSet rowSet = jdbcTemplate.queryForRowSet("select areaid,money from person where uuid='"+uuid+"'");
 			if(rowSet.next())
 			{
 				int areaid = rowSet.getInt("areaid");
+				long money = rowSet.getInt("money");
+				
+				if(money < 10 && money > 2)
+				{
+					repanse = "掌柜：你身上就几个铜板，再这么下去连住店都住不起了，非得露宿街头不可。\n"+repanse;
+				}
+				else if(money < 2)
+				{
+					JSONObject object = new JSONObject();
+					object.put("code", 200);
+					object.put("message", "掌柜：'哎你没钱就别进来了！' 掌柜的似乎不太欢迎你，但你也确实身上连2个铜板都没有，怪不得别人。");
+					return object.toString();
+				}
+				
 				if(areaid!=1 && areaid!=126 && areaid != 214 && areaid != 306)
 				{
 					JSONObject object = new JSONObject();
@@ -71,14 +86,14 @@ public class MySQLOprea {
 					return object.toString();//ResultSetTool.resultSetToJsonObject(rs).toString();
 				}
 			}
-					String sql = "update person set hp=maxhp where uuid='"+uuid+"'";
+					String sql = "update person set hp=maxhp,money=money-2 where uuid='"+uuid+"'";
 					
 					jdbcTemplate.update(sql);
 					
 					JSONObject object = new JSONObject();
 					object.put("code", 200);
-					object.put("message", "住店休息!");
-					return object.toString();//ResultSetTool.resultSetToJsonObject(rs).toString();
+					object.put("message", repanse);
+					return object.toString();
 		}
 		catch (JSONException e)
 		{
@@ -121,7 +136,7 @@ public class MySQLOprea {
 	
 	// type 1|start battle   2|refresh descript
 	@ResponseBody
-	public String battle(String attackerid,String defencerid,String type)
+	public synchronized String battle(String attackerid,String defencerid,String type)
 	{
 		try
 		{
@@ -195,7 +210,6 @@ public class MySQLOprea {
 			int stateAttacker = attackerSet.getInt("state");
 			int taskidAttacker = attackerSet.getInt("taskid");
 			String isbattleA = attackerSet.getString("isbattle");
-			
 			///** 物品属性从装备后开始加入到个人属性中，不在战斗中叠加
 			String queryGoodsAttacker = "select type,name from goods where masterid ='"+attackerid+"' and state=1 and (type=101 or type=102 or type=103)";
 			SqlRowSet resultSetGoodsAttacker = jdbcTemplate.queryForRowSet(queryGoodsAttacker);
@@ -314,7 +328,7 @@ public class MySQLOprea {
 			String resultSeccUUID = "";
 			
 			
-			if(attackerareaid != defenceAreaid)
+			if(attackerareaid != defenceAreaid || stateAttacker != stateDefence)
 			{
 				jdbcTemplate.update("update person set isbattle = 'false' where uuid='"+attackerid+"' or uuid='"+defencerid+"'");
 				JSONObject object = new JSONObject();
@@ -331,8 +345,8 @@ public class MySQLOprea {
 				// 等级差
 				int gdiff = attackerGrade - defencerGrade;
 				
-				int temp = attackerAttack  + gdiff * 50;
-				int temp2 = attackerDefence + gdiff * 15;
+				int temp = attackerAttack  + gdiff * 65;
+				int temp2 = attackerDefence + gdiff * 30;
 				
 				attackerAttack = (temp <= 0 ? 1:(temp));
 				attackerDefence= (temp2 <= 0 ? 1:temp2);
@@ -361,14 +375,14 @@ public class MySQLOprea {
 								return object.toString();
 							}
 							
-							// 不能杀10级以下玩家
-							if(defencerGrade < 10)
+							// 不能杀15级以下玩家
+							if(defencerGrade <= 15)
 							{
 								jdbcTemplate.update("update person set isbattle = 'false' where uuid='"+attackerid+"' or uuid='"+defencerid+"'");
 								jdbcTemplate.execute("delete from battle where attackerid='"+attackerid+"' and defencerid='"+defencerid+"'");
 								
 								JSONObject object = new JSONObject();
-								object.put("message", "对方涉世未深，你怎忍心下毒手!");
+								object.put("message", "对方涉世未深，你怎忍心下毒手!(等ta长大点再杀吧)");
 								object.put("code",206);
 								object.put("statecode", 0);
 								return object.toString();
@@ -433,6 +447,7 @@ public class MySQLOprea {
 				object.put("statecode", stateCode);
 				return object.toString();
 			}
+			
 			///**
 			String queryGoodsDefencer = "select type,name from goods where masterid ='"+defencerid+"' and state=1  and (type=101 or type=102 or type=103)";
 			SqlRowSet resultSetGoodsDefencer = jdbcTemplate.queryForRowSet(queryGoodsDefencer);
@@ -594,6 +609,7 @@ public class MySQLOprea {
 			{
 				jdbcTemplate.update("update person set hp ="+attackerHp+" where uuid='"+attackerid+"'");
 				jdbcTemplate.update("update person set hp ="+defencerHp+" where uuid='"+defencerid+"'");
+				
 				placeDesc = result;
 			}
 			// 有人死亡了
@@ -601,12 +617,12 @@ public class MySQLOprea {
 			{
 				// 红名大于20 死后直接去天牢
 				if(redvalueDefence > 20)
-					jdbcTemplate.update("update person set areaid=10000 where uuid='"+defencerid+"'");
+					jdbcTemplate.update("update person set areaid=10000 where uuid='"+defencerid+"' and type=1");
 				if(redvalueAttack > 20)
-					jdbcTemplate.update("update person set areaid=10000 where uuid='"+attackerid+"'");
+					jdbcTemplate.update("update person set areaid=10000 where uuid='"+attackerid+"' and type=1");
 				
 				subLifeValue(attackerid, defencerid, typeAttacker, typeDefencer);
-				jdbcTemplate.execute("delete from battle where attackerid='"+attackerid+"' and defencerid='"+defencerid+"'");
+				jdbcTemplate.execute("delete from battle where (attackerid='"+attackerid+"' and defencerid='"+defencerid+"') or (attackerid='"+defencerid+"' and defencerid='"+attackerid+"')");
 				
 				// 重置战斗状态
 				jdbcTemplate.update("update person set isbattle = 'false' where uuid='"+attackerid+"' or uuid='"+defencerid+"'");
@@ -1152,13 +1168,15 @@ public class MySQLOprea {
 			// 打死特殊NPC 盗跖团伙的奖励
 			if("3071".equals(dieruuid))
 			{
-				int r = random.nextInt(2);
+				int r = random.nextInt(3);
 				if(r == 1 || successeruuid.equals("0001"))
 				{
 					int timeCount = random.nextInt(6)+13;
 					String dropMoneyDesc = "";
 					dropMoneyDesc += dropSpecial(8, grade, areaid, diername,successeruuid);
 					dropMoneyDesc += dropSpecial(9, grade, areaid, diername,successeruuid);
+					dropMoneyDesc += dropSpecial(9, grade, areaid, diername,successeruuid);
+					
 					for (int i = 0; i < timeCount; i++)
 					{
 						// 药品和铜板
@@ -1177,13 +1195,17 @@ public class MySQLOprea {
 				}
 				else
 				{
-					int timeCount = random.nextInt(6)+13;
+					int timeCount = random.nextInt(6)+15;
 					String dropMoneyDesc = "";
+					
+					dropMoneyDesc += dropSpecial(9, grade, areaid, diername,successeruuid);
+					dropMoneyDesc += dropSpecial(9, grade, areaid, diername,successeruuid);
+					dropMoneyDesc += dropSpecial(9, grade, areaid, diername,successeruuid);
+					
 					for (int i = 0; i < timeCount; i++)
 					{
-						dropMoneyDesc += dropSpecial(9, grade, areaid, diername,successeruuid);
 						// 药品和铜板
-						if(i < 12)
+						if(i < 13)
 						{
 							dropMoneyDesc += dropSpecial(1, grade, areaid, diername,successeruuid);
 						}
@@ -1222,7 +1244,7 @@ public class MySQLOprea {
 			SqlRowSet rowSet = jdbcTemplate.queryForRowSet("select tasktype,taskrequest,taskthings,taskname from daily_task where taskid='"+attackertaskid+"'");
 			if(rowSet.next())
 			{
-				int taskrequest = rowSet.getInt("taskrequest");
+//				int taskrequest = rowSet.getInt("taskrequest");
 				int tasktype = rowSet.getInt("tasktype");
 				String taskname = rowSet.getString("taskname");
 				String taskthings = rowSet.getString("taskthings");

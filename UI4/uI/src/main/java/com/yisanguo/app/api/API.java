@@ -10,7 +10,7 @@ public interface API {
 	//http://112.124.109.206:8080/springMVC/requestAction/ranking.action?&order=grade
 	// 112.124.109.206   192.168.30.136
 	/** HOST 主机**/
-	String Host = "192.168.30.136:8080/springMVC";//"wlgac420108.jsp.jspee.org";  // ||localhost:8080
+	String Host = "112.124.109.206:8080/springMVC";//"wlgac420108.jsp.jspee.org";  // ||localhost:8080
 	String TEAM_REQUEST = "http://"+API.Host+"/organizeteamAction/"; 
 	String FORM_REQUEST = "http://"+API.Host+"/formAction/";
 	String MESSAGE_REQUEST = "http://"+API.Host+"/messageAction/";
